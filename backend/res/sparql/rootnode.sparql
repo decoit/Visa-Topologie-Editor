@@ -1,0 +1,9 @@
+PREFIX visa: <http://visa-project.de/topology/>
+
+SELECT DISTINCT ?root ?name
+WHERE {
+	$S_MOD$
+	?root visa:device ?dev .
+	?root visa:name ?name .
+	$E_MOD$
+}

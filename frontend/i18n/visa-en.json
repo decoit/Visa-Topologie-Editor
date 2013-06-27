@@ -1,0 +1,306 @@
+{
+	"title": "VISA Topology Editor",
+	"headline": "Topology Editor",
+	"topology": {
+		"title": "Topology",
+		"conf": "Configure",
+		"iotool": "IO-Tool",
+		"rdf": "RDF/XML",
+		"network": "Network",
+		"reset": "Reset topology"
+	},
+	"options": {
+		"title": "Options",
+		"routing": "Routing",
+		"names": "Show names",
+		"vlans": "Show VLAN",
+		"shutdown": "Shutdown backend",
+		"language": {
+			"label": "Language:",
+			"de": "Deutsch",
+			"en": "English"
+		}
+	},
+	"components": {
+		"title": "Components",
+		"invvm": "Virtual Machines",
+		"invswitch": "Switches",
+		"newvm": "New VM",
+		"newswitch": "New Switch",
+		"newvsa": "New VSA"
+	},
+	"trashtable": {
+		"bgleft": "trashtableLeftEN",
+		"bgright": "trashtableRightEN",
+		"oldbgleft": "trashtableLeftDE",
+		"oldbgright": "trashtableRightDE"
+	},
+	"editor": {
+		"title": "Editor"
+	},
+	"dialog": {
+		"alert": {
+			"ok": "OK",
+			"msg": {
+				"iotoolbusy": {
+					"title": "Error",
+					"msg": "The IO-Tool is busy executing a previous command and thus is not available"
+				},
+				"novsatarget": {
+					"title": "Missing connection target",
+					"msg": "One or more VSA connection have no assigned target device. Operation aborted."
+				},
+				"novsaname": {
+					"title": "Missing name",
+					"msg": "No name was set for this VSA. Operation abgebrochen."
+				}
+			}
+		},
+		"confirm": {
+			"yes": "Yes",
+			"no": "No",
+			"msg": {
+				"remcomp": {
+					"title": "Remove component?",
+					"body1": "Shall the component '",
+					"body2": "' really be removed? This cannot be undone!"
+				},
+				"shutdown": {
+					"title": "Shutdown backend?",
+					"body": "Shall the editor backend really be shut down? The editor cannot be used until the backend is restarted!"
+				}
+			}
+		},
+		"createcomp": {
+			"title": "Create component",
+			"propertybox": {
+				"title": "Properties",
+				"name": "Name",
+				"width": "Width:",
+				"height": "Height:",
+				"sizeapply": "Apply",
+				"help": "$ID$ will be replaced by internal ID",
+				"ifnum": "Number of interfaces",
+				"ifnumapply": "Apply"
+			},
+			"interfacebox": {
+				"title": "Interfaces"
+			},
+			"buttons": {
+				"create": "Create",
+				"cancel": "Cancel"
+			}
+		},
+		"createvsa": {
+			"title": "Create new VSA",
+			"selectbox": {
+				"title": "VSA type",
+				"label": "Select VSA type",
+				"novsaoption": "No VSA templates found"
+			},
+			"propertybox": {
+				"title": "Properties",
+				"name": "Name:",
+				"connections": "Connections",
+				"target": "Target:"
+			},
+			"buttons": {
+				"create": "Create",
+				"cancel": "Cancel"
+			}
+		},
+		"cable": {
+			"title": "Show details - Cable",
+			"componentbox": {
+				"title": "Components",
+				"from": "From",
+				"to": "To"
+			},
+			"optionbox": {
+				"title": "Options",
+				"button": "Remove cable"
+			},
+			"buttons": {
+				"close": "Close"
+			}
+		},
+		"topology": {
+			"title": "Configure topology",
+			"name": {
+				"title": "Identification",
+				"topoid": "Topology-ID:",
+				"toponame": "Name:"
+			},
+			"buttons": {
+				"ok": "OK",
+				"cancel": "Cancel"
+			}
+		},
+		"network": {
+			"title": "Manage network",
+			"newnetwork": {
+				"title": "New subnet",
+				"address": "Network IP address:",
+				"subnet": "Subnet mask (CIDR):",
+				"button": "Create"
+			},
+			"existingnetwork": {
+				"title": "Existing subnets",
+				"address": "IP address",
+				"subnetmask": "Subnet mask",
+				"version": "IP version",
+				"nonetwork": "No subnets found"
+			},
+			"newvlan": {
+				"title": "New VLAN",
+				"name": "Name:",
+				"color": "Color (#RRGGBB):",
+				"button": "Create"
+			},
+			"editvlan": {
+				"title": "Edit VLAN",
+				"name": "Name:",
+				"color": "Color (#RRGGBB):",
+				"buttons": {
+					"save": "Save",
+					"cancel": "Cancel"
+				}
+			},
+			"existingvlan": {
+				"title": "Existing VLANs",
+				"name": "Name",
+				"color": "Color",
+				"ifcount": "# Switch-Interfaces",
+				"novlan": "No VLANs found",
+				"edit": "Edit",
+				"remove": "Remove"
+			},
+			"buttons": {
+				"close": "Close"
+			}
+		},
+		"iotool": {
+			"title": "IO-Tool",
+			"hostname": "Hostname / IP-Address",
+			"port": "Port number",
+			"connbutton": "Connect",
+			"connto": "Connected to:",
+			"disconnbutton": "Disconnect",
+			"topolist": "Topologies",
+			"loadbutton": "Load",
+			"savebutton": "Save",
+			"removebutton": "Remove",
+			"replicatebutton": "Replicate",
+			"demonstrator": "Demonstrator",
+			"collectbutton": "Collect",
+			"cleanupbutton": "Clean up",
+			"resetbutton": "Reset"
+		},
+		"rdf": {
+			"title": "RDF/XML",
+			"importbox": {
+				"title": "Import",
+				"button": "Upload RDF/XML file",
+				"replace": "Replace topology",
+				"append": "Integrate into topology"
+			},
+			"exportbox": {
+				"title": "Export",
+				"filename": "Filename",
+				"button": "Export",
+				"status": {
+					"title": "Status",
+					"notexported": "not exported",
+					"notuptodate": "exported, not up-to-date",
+					"uptodate": "exported and up-to-date"
+				},
+				"download": {
+					"title": "Download",
+					"button": "Download"
+				}
+			},
+			"buttons": {
+				"close": "Close"
+			}
+		},
+		"comp": {
+			"title": "Configure component",
+			"identbox": {
+				"title": "Identification",
+				"name": "Hostname:",
+				"id": "ID:",
+				"type": "Type:",
+				"types": {
+					"switch": "Switch",
+					"host": "Physical host",
+					"vm": "Virtual Machine"
+				}
+			},
+			"ifbox": {
+				"title": "Interfaces",
+				"newinterfacetitle": "New interface",
+				"newinterface": "Add interface",
+				"ipaddress": "IP-Address",
+				"linklocal": "Link-local",
+				"network": "Network",
+				"orientation": "Orientation",
+				"orientations": {
+					"top": "top",
+					"bottom": "bottom",
+					"left": "left",
+					"right": "right"
+				},
+				"vlan": "VLAN",
+				"vlanedit": "Edit"
+			},
+			"buttons": {
+				"ok": "OK",
+				"cancel": "Cancel"
+			},
+			"vlanassign": {
+				"diagtitle": "Modify VLAN assignment",
+				"title": "Existing VLANs",
+				"compname": "Component:",
+				"ifname": "Interface:",
+				"buttons": {
+					"save": "Save",
+					"cancel": "Cancel"
+				}
+			}
+		},
+		"reset": {
+			"title": "Reset topology",
+			"clearbox": {
+				"title": "Clear topology",
+				"radio": "Clear topology"
+			},
+			"statebox": {
+				"title": "Reset to saved state",
+				"nostates": "No saved states found",
+				"importof": "Import of"
+			},
+			"buttons": {
+				"ok": "OK",
+				"cancel": "Cancel"
+			}
+		}
+	},
+	"blockui": {
+		"reset": {
+			"title": "Please wait",
+			"text": "The editor backend is being reset. The page will reload after completion."
+		},
+		"nobackend": {
+			"title": "Editor backend not available",
+			"text": "The editor backend is not available. Please start the backend and then reload this page."
+		},
+		"buildtopology": {
+			"title": "Please wait",
+			"text": "Processing topology information, this may take some time..."
+		},
+		"iotoolcomm": {
+			"title": "Please wait",
+			"text": "The editor in communicating with the IO-Tool, this may take some time..."
+		}
+	}
+}

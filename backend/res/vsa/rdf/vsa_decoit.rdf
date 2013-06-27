@@ -1,0 +1,397 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://visa-project.de/topology/"
+    xmlns:j.1="http://visa-project.de/backup/" > 
+  <rdf:Description rdf:about="http://visa-project.de/topology/Administration___tap0e93b469-95">
+    <j.0:name>Administration___tap0e93b469-95</j.0:name>
+    <j.0:internalName>Administration___tap0e93b469-95</j.0:internalName>
+    <j.0:internalIdentifier>tap0e93b469-95</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/ubuntu-quantum_br-int___tap0e93b469-95"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__ipv4_address_172_31_252_14/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/topologyeditor___tapa7474063-1c">
+    <j.0:name>topologyeditor___tapa7474063-1c</j.0:name>
+    <j.0:internalName>topologyeditor___tapa7474063-1c</j.0:internalName>
+    <j.0:internalIdentifier>tapa7474063-1c</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/ubuntu-quantum_br-int___tapa7474063-1c"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__ipv4_address_172_31_253_8/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/ubuntu-quantum_br-int___tap0e93b469-95">
+    <j.0:name>ubuntu-quantum_br-int___tap0e93b469-95</j.0:name>
+    <j.0:internalName>ubuntu-quantum_br-int___tap0e93b469-95</j.0:internalName>
+    <j.0:internalIdentifier>tap0e93b469-95</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/Administration___tap0e93b469-95"/>
+    <j.0:vlan rdf:resource="http://visa-project.de/topology/__vlan_1__"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__mac_fa163e2609f7__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/nagios">
+    <j.0:name>nagios</j.0:name>
+    <j.0:internalName>nagios</j.0:internalName>
+    <j.0:type>host</j.0:type>
+    <j.0:physical>false</j.0:physical>
+    <j.0:imageFile></j.0:imageFile>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/nagios___tapb3dead9a-09"/>
+    <j.1:group>172.31.252.0/24</j.1:group>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__mac_fa163e5a4ec1__">
+    <j.0:type>ethernet</j.0:type>
+    <j.0:value>fa163e5a4ec1</j.0:value>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/ubuntu-quantum_unknown___l1_topologyeditor">
+    <j.0:name>ubuntu-quantum_unknown___l1_topologyeditor</j.0:name>
+    <j.0:internalName>ubuntu-quantum_unknown___l1_topologyeditor</j.0:internalName>
+    <j.0:internalIdentifier>l1_topologyeditor</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/topologyeditor___l1_unknown"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__ipv4_address_172_31_252_8/24__">
+    <j.0:type>ipv4</j.0:type>
+    <j.0:value>172.31.252.8</j.0:value>
+    <j.0:network rdf:resource="http://visa-project.de/topology/__ipv4_network_172.31.252.0/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__vsa_DECOIT_DevTopology__">
+    <j.0:name>DECOIT_DevTopology</j.0:name>
+    <j.0:internalName>__vsa_DECOIT_DevTopology__</j.0:internalName>
+    <j.0:device rdf:resource="http://visa-project.de/topology/ubuntu-quantum_unknown"/>
+    <j.0:device rdf:resource="http://visa-project.de/topology/ubuntu-quantum_br-int"/>
+    <j.0:device rdf:resource="http://visa-project.de/topology/nagios"/>
+    <j.0:device rdf:resource="http://visa-project.de/topology/openvpn"/>
+    <j.0:device rdf:resource="http://visa-project.de/topology/gateway"/>
+    <j.0:device rdf:resource="http://visa-project.de/topology/Administration"/>
+    <j.0:device rdf:resource="http://visa-project.de/topology/topologyeditor"/>
+    <j.0:device rdf:resource="http://visa-project.de/topology/irond"/>
+    <j.0:device rdf:resource="http://visa-project.de/topology/snort"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/ubuntu-quantum_unknown">
+    <j.0:name>ubuntu-quantum_unknown</j.0:name>
+    <j.0:internalName>ubuntu-quantum_unknown</j.0:internalName>
+    <j.0:type>switch</j.0:type>
+    <j.0:physical>false</j.0:physical>
+    <j.0:imageFile></j.0:imageFile>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/ubuntu-quantum_unknown___l1_topologyeditor"/>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/ubuntu-quantum_unknown___l1_openvpn"/>
+    <j.1:group>0.0.0.0</j.1:group>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__ipv4_address_10_240_0_6/24__">
+    <j.0:type>ipv4</j.0:type>
+    <j.0:value>10.240.0.6</j.0:value>
+    <j.0:network rdf:resource="http://visa-project.de/topology/__ipv4_network_10.240.0.0/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/openvpn___tap1e54e0c6-26">
+    <j.0:name>openvpn___tap1e54e0c6-26</j.0:name>
+    <j.0:internalName>openvpn___tap1e54e0c6-26</j.0:internalName>
+    <j.0:internalIdentifier>tap1e54e0c6-26</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/ubuntu-quantum_br-int___tap1e54e0c6-26"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__ipv4_address_172_31_253_3/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__mac_fa163e17856e__">
+    <j.0:type>ethernet</j.0:type>
+    <j.0:value>fa163e17856e</j.0:value>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/Administration">
+    <j.0:name>Administration</j.0:name>
+    <j.0:internalName>Administration</j.0:internalName>
+    <j.0:type>host</j.0:type>
+    <j.0:physical>false</j.0:physical>
+    <j.0:imageFile></j.0:imageFile>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/Administration___tap0e93b469-95"/>
+    <j.1:group>172.31.252.0/24</j.1:group>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/snort">
+    <j.0:name>snort</j.0:name>
+    <j.0:internalName>snort</j.0:internalName>
+    <j.0:type>host</j.0:type>
+    <j.0:physical>false</j.0:physical>
+    <j.0:imageFile></j.0:imageFile>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/snort___tap9376d5d1-2d"/>
+    <j.1:group>172.31.252.0/24</j.1:group>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__ipv4_address_172_31_253_3/24__">
+    <j.0:type>ipv4</j.0:type>
+    <j.0:value>172.31.253.3</j.0:value>
+    <j.0:network rdf:resource="http://visa-project.de/topology/__ipv4_network_172.31.253.0/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__mac_fa163e2609f7__">
+    <j.0:type>ethernet</j.0:type>
+    <j.0:value>fa163e2609f7</j.0:value>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/gateway___tap418f9a3c-dc">
+    <j.0:name>gateway___tap418f9a3c-dc</j.0:name>
+    <j.0:internalName>gateway___tap418f9a3c-dc</j.0:internalName>
+    <j.0:internalIdentifier>tap418f9a3c-dc</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/ubuntu-quantum_br-int___tap418f9a3c-dc"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__ipv4_address_172_31_253_2/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/topologyeditor">
+    <j.0:name>topologyeditor</j.0:name>
+    <j.0:internalName>topologyeditor</j.0:internalName>
+    <j.0:type>host</j.0:type>
+    <j.0:physical>false</j.0:physical>
+    <j.0:imageFile></j.0:imageFile>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/topologyeditor___l1_unknown"/>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/topologyeditor___tapa7474063-1c"/>
+    <j.1:group>0.0.0.0</j.1:group>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__ipv4_address_10_240_0_2/24__">
+    <j.0:type>ipv4</j.0:type>
+    <j.0:value>10.240.0.2</j.0:value>
+    <j.0:network rdf:resource="http://visa-project.de/topology/__ipv4_network_10.240.0.0/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__ipv4_address_172_31_253_8/24__">
+    <j.0:type>ipv4</j.0:type>
+    <j.0:value>172.31.253.8</j.0:value>
+    <j.0:network rdf:resource="http://visa-project.de/topology/__ipv4_network_172.31.253.0/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__mac_fa163e592978__">
+    <j.0:type>ethernet</j.0:type>
+    <j.0:value>fa163e592978</j.0:value>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/ubuntu-quantum_unknown___l1_openvpn">
+    <j.0:name>ubuntu-quantum_unknown___l1_openvpn</j.0:name>
+    <j.0:internalName>ubuntu-quantum_unknown___l1_openvpn</j.0:internalName>
+    <j.0:internalIdentifier>l1_openvpn</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/openvpn___l1_unknown"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/ubuntu-quantum_br-int___tap458242b9-be">
+    <j.0:name>ubuntu-quantum_br-int___tap458242b9-be</j.0:name>
+    <j.0:internalName>ubuntu-quantum_br-int___tap458242b9-be</j.0:internalName>
+    <j.0:internalIdentifier>tap458242b9-be</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/irond___tap458242b9-be"/>
+    <j.0:vlan rdf:resource="http://visa-project.de/topology/__vlan_1__"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__mac_fa163e1ff33d__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/ubuntu-quantum_br-int___tap59f05ed9-21">
+    <j.0:name>ubuntu-quantum_br-int___tap59f05ed9-21</j.0:name>
+    <j.0:internalName>ubuntu-quantum_br-int___tap59f05ed9-21</j.0:internalName>
+    <j.0:internalIdentifier>tap59f05ed9-21</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/gateway___tap59f05ed9-21"/>
+    <j.0:vlan rdf:resource="http://visa-project.de/topology/__vlan_1__"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__mac_fa163e17856e__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__mac_fa163e0b2058__">
+    <j.0:type>ethernet</j.0:type>
+    <j.0:value>fa163e0b2058</j.0:value>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__mac_fa163e0f4095__">
+    <j.0:type>ethernet</j.0:type>
+    <j.0:value>fa163e0f4095</j.0:value>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__mac_fa163e1ff33d__">
+    <j.0:type>ethernet</j.0:type>
+    <j.0:value>fa163e1ff33d</j.0:value>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__vlan_2__">
+    <j.0:internalName>__vlan_2__</j.0:internalName>
+    <j.0:id>2</j.0:id>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/gateway___tap59f05ed9-21">
+    <j.0:name>gateway___tap59f05ed9-21</j.0:name>
+    <j.0:internalName>gateway___tap59f05ed9-21</j.0:internalName>
+    <j.0:internalIdentifier>tap59f05ed9-21</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/ubuntu-quantum_br-int___tap59f05ed9-21"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__ipv4_address_172_31_252_7/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/irond___tap458242b9-be">
+    <j.0:name>irond___tap458242b9-be</j.0:name>
+    <j.0:internalName>irond___tap458242b9-be</j.0:internalName>
+    <j.0:internalIdentifier>tap458242b9-be</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/ubuntu-quantum_br-int___tap458242b9-be"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__ipv4_address_172_31_252_5/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/openvpn___l1_unknown">
+    <j.0:name>openvpn___l1_unknown</j.0:name>
+    <j.0:internalName>openvpn___l1_unknown</j.0:internalName>
+    <j.0:internalIdentifier>l1_unknown</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/ubuntu-quantum_unknown___l1_openvpn"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__ipv4_address_10_240_0_6__"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__ipv4_address_10_240_0_6/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/ubuntu-quantum_br-int___tap9376d5d1-2d">
+    <j.0:name>ubuntu-quantum_br-int___tap9376d5d1-2d</j.0:name>
+    <j.0:internalName>ubuntu-quantum_br-int___tap9376d5d1-2d</j.0:internalName>
+    <j.0:internalIdentifier>tap9376d5d1-2d</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/snort___tap9376d5d1-2d"/>
+    <j.0:vlan rdf:resource="http://visa-project.de/topology/__vlan_1__"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__mac_fa163e592978__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__ipv4_address_172_31_252_11/24__">
+    <j.0:type>ipv4</j.0:type>
+    <j.0:value>172.31.252.11</j.0:value>
+    <j.0:network rdf:resource="http://visa-project.de/topology/__ipv4_network_172.31.252.0/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__ipv4_address_172_31_252_4/24__">
+    <j.0:type>ipv4</j.0:type>
+    <j.0:value>172.31.252.4</j.0:value>
+    <j.0:network rdf:resource="http://visa-project.de/topology/__ipv4_network_172.31.252.0/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/openvpn___tapab0bdbd4-4f">
+    <j.0:name>openvpn___tapab0bdbd4-4f</j.0:name>
+    <j.0:internalName>openvpn___tapab0bdbd4-4f</j.0:internalName>
+    <j.0:internalIdentifier>tapab0bdbd4-4f</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/ubuntu-quantum_br-int___tapab0bdbd4-4f"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__ipv4_address_172_31_252_8/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__ipv4_address_10_240_0_2__">
+    <j.0:type>ipv4</j.0:type>
+    <j.0:value>10.240.0.2</j.0:value>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__ipv4_address_172_31_252_7/24__">
+    <j.0:type>ipv4</j.0:type>
+    <j.0:value>172.31.252.7</j.0:value>
+    <j.0:network rdf:resource="http://visa-project.de/topology/__ipv4_network_172.31.252.0/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/snort___tap9376d5d1-2d">
+    <j.0:name>snort___tap9376d5d1-2d</j.0:name>
+    <j.0:internalName>snort___tap9376d5d1-2d</j.0:internalName>
+    <j.0:internalIdentifier>tap9376d5d1-2d</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/ubuntu-quantum_br-int___tap9376d5d1-2d"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__ipv4_address_172_31_252_4/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/ubuntu-quantum_br-int___tapb3dead9a-09">
+    <j.0:name>ubuntu-quantum_br-int___tapb3dead9a-09</j.0:name>
+    <j.0:internalName>ubuntu-quantum_br-int___tapb3dead9a-09</j.0:internalName>
+    <j.0:internalIdentifier>tapb3dead9a-09</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/nagios___tapb3dead9a-09"/>
+    <j.0:vlan rdf:resource="http://visa-project.de/topology/__vlan_1__"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__mac_fa163e0b2058__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/gateway">
+    <j.0:name>gateway</j.0:name>
+    <j.0:internalName>gateway</j.0:internalName>
+    <j.0:type>host</j.0:type>
+    <j.0:physical>false</j.0:physical>
+    <j.0:imageFile></j.0:imageFile>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/gateway___tap418f9a3c-dc"/>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/gateway___tap59f05ed9-21"/>
+    <j.1:group>0.0.0.0</j.1:group>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__ipv4_address_172_31_253_2/24__">
+    <j.0:type>ipv4</j.0:type>
+    <j.0:value>172.31.253.2</j.0:value>
+    <j.0:network rdf:resource="http://visa-project.de/topology/__ipv4_network_172.31.253.0/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__mac_fa163e40e544__">
+    <j.0:type>ethernet</j.0:type>
+    <j.0:value>fa163e40e544</j.0:value>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__ipv4_address_10_240_0_6__">
+    <j.0:type>ipv4</j.0:type>
+    <j.0:value>10.240.0.6</j.0:value>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__ipv4_address_172_31_252_5/24__">
+    <j.0:type>ipv4</j.0:type>
+    <j.0:value>172.31.252.5</j.0:value>
+    <j.0:network rdf:resource="http://visa-project.de/topology/__ipv4_network_172.31.252.0/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/irond">
+    <j.0:name>irond</j.0:name>
+    <j.0:internalName>irond</j.0:internalName>
+    <j.0:type>host</j.0:type>
+    <j.0:physical>false</j.0:physical>
+    <j.0:imageFile></j.0:imageFile>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/irond___tap458242b9-be"/>
+    <j.1:group>172.31.252.0/24</j.1:group>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/ubuntu-quantum_br-int___tap418f9a3c-dc">
+    <j.0:name>ubuntu-quantum_br-int___tap418f9a3c-dc</j.0:name>
+    <j.0:internalName>ubuntu-quantum_br-int___tap418f9a3c-dc</j.0:internalName>
+    <j.0:internalIdentifier>tap418f9a3c-dc</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/gateway___tap418f9a3c-dc"/>
+    <j.0:vlan rdf:resource="http://visa-project.de/topology/__vlan_2__"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__mac_fa163e40e544__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__ipv4_network_172.31.252.0/24__">
+    <j.0:type>ipv4</j.0:type>
+    <j.0:value>172.31.252.0</j.0:value>
+    <j.0:netmaskLength>24</j.0:netmaskLength>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__ipv4_address_172_31_252_14/24__">
+    <j.0:type>ipv4</j.0:type>
+    <j.0:value>172.31.252.14</j.0:value>
+    <j.0:network rdf:resource="http://visa-project.de/topology/__ipv4_network_172.31.252.0/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__vlan_1__">
+    <j.0:internalName>__vlan_1__</j.0:internalName>
+    <j.0:id>1</j.0:id>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/nagios___tapb3dead9a-09">
+    <j.0:name>nagios___tapb3dead9a-09</j.0:name>
+    <j.0:internalName>nagios___tapb3dead9a-09</j.0:internalName>
+    <j.0:internalIdentifier>tapb3dead9a-09</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/ubuntu-quantum_br-int___tapb3dead9a-09"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__ipv4_address_172_31_252_11/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/ubuntu-quantum_br-int___tapa7474063-1c">
+    <j.0:name>ubuntu-quantum_br-int___tapa7474063-1c</j.0:name>
+    <j.0:internalName>ubuntu-quantum_br-int___tapa7474063-1c</j.0:internalName>
+    <j.0:internalIdentifier>tapa7474063-1c</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/topologyeditor___tapa7474063-1c"/>
+    <j.0:vlan rdf:resource="http://visa-project.de/topology/__vlan_2__"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__mac_fa163e340628__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__ipv4_network_172.31.253.0/24__">
+    <j.0:type>ipv4</j.0:type>
+    <j.0:value>172.31.253.0</j.0:value>
+    <j.0:netmaskLength>24</j.0:netmaskLength>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/ubuntu-quantum_br-int___tapab0bdbd4-4f">
+    <j.0:name>ubuntu-quantum_br-int___tapab0bdbd4-4f</j.0:name>
+    <j.0:internalName>ubuntu-quantum_br-int___tapab0bdbd4-4f</j.0:internalName>
+    <j.0:internalIdentifier>tapab0bdbd4-4f</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/openvpn___tapab0bdbd4-4f"/>
+    <j.0:vlan rdf:resource="http://visa-project.de/topology/__vlan_1__"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__mac_fa163e5a4ec1__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/ubuntu-quantum_br-int___tap1e54e0c6-26">
+    <j.0:name>ubuntu-quantum_br-int___tap1e54e0c6-26</j.0:name>
+    <j.0:internalName>ubuntu-quantum_br-int___tap1e54e0c6-26</j.0:internalName>
+    <j.0:internalIdentifier>tap1e54e0c6-26</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/openvpn___tap1e54e0c6-26"/>
+    <j.0:vlan rdf:resource="http://visa-project.de/topology/__vlan_2__"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__mac_fa163e0f4095__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__ipv4_network_10.240.0.0/24__">
+    <j.0:type>ipv4</j.0:type>
+    <j.0:value>10.240.0.0</j.0:value>
+    <j.0:netmaskLength>24</j.0:netmaskLength>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/topologyeditor___l1_unknown">
+    <j.0:name>topologyeditor___l1_unknown</j.0:name>
+    <j.0:internalName>topologyeditor___l1_unknown</j.0:internalName>
+    <j.0:internalIdentifier>l1_unknown</j.0:internalIdentifier>
+    <j.0:connected rdf:resource="http://visa-project.de/topology/ubuntu-quantum_unknown___l1_topologyeditor"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__ipv4_address_10_240_0_2__"/>
+    <j.0:address rdf:resource="http://visa-project.de/topology/__ipv4_address_10_240_0_2/24__"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/openvpn">
+    <j.0:name>openvpn</j.0:name>
+    <j.0:internalName>openvpn</j.0:internalName>
+    <j.0:type>host</j.0:type>
+    <j.0:physical>false</j.0:physical>
+    <j.0:imageFile></j.0:imageFile>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/openvpn___l1_unknown"/>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/openvpn___tap1e54e0c6-26"/>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/openvpn___tapab0bdbd4-4f"/>
+    <j.1:group>0.0.0.0</j.1:group>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/ubuntu-quantum_br-int">
+    <j.0:name>ubuntu-quantum_br-int</j.0:name>
+    <j.0:internalName>ubuntu-quantum_br-int</j.0:internalName>
+    <j.0:type>switch</j.0:type>
+    <j.0:physical>false</j.0:physical>
+    <j.0:imageFile></j.0:imageFile>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/ubuntu-quantum_br-int___tap0e93b469-95"/>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/ubuntu-quantum_br-int___tap1e54e0c6-26"/>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/ubuntu-quantum_br-int___tapa7474063-1c"/>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/ubuntu-quantum_br-int___tapb3dead9a-09"/>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/ubuntu-quantum_br-int___tap458242b9-be"/>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/ubuntu-quantum_br-int___tap418f9a3c-dc"/>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/ubuntu-quantum_br-int___tapab0bdbd4-4f"/>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/ubuntu-quantum_br-int___tap9376d5d1-2d"/>
+    <j.0:interface rdf:resource="http://visa-project.de/topology/ubuntu-quantum_br-int___tap59f05ed9-21"/>
+    <j.1:group>0.0.0.0</j.1:group>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__mac_fa163e340628__">
+    <j.0:type>ethernet</j.0:type>
+    <j.0:value>fa163e340628</j.0:value>
+  </rdf:Description>
+</rdf:RDF>

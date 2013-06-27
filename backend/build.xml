@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="export_jar" name="Build actions Project JavaBackend">
+	<property name="exportDir" location="dist"/>
+	<property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <path id="JavaBackend.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="lib/jena/log4j-1.2.16.jar"/>
+        <pathelement location="lib/jena/slf4j-api-1.6.4.jar"/>
+        <pathelement location="lib/jena/slf4j-log4j12-1.6.4.jar"/>
+        <pathelement location="lib/snakeyaml/snakeyaml-1.11.jar"/>
+        <pathelement location="lib/visa-protocol/VISAProtocol.jar"/>
+        <pathelement location="lib/commons_lang/commons-lang3-3.1.jar"/>
+        <pathelement location="lib/json/JSON.jar"/>
+        <pathelement location="lib/jena/commons-codec-1.5.jar"/>
+        <pathelement location="lib/jena/httpclient-4.1.2.jar"/>
+        <pathelement location="lib/jena/httpcore-4.1.3.jar"/>
+        <pathelement location="lib/jena/xercesImpl-2.10.0.jar"/>
+        <pathelement location="lib/jena/xml-apis-1.4.01.jar"/>
+        <pathelement location="lib/jena/jcl-over-slf4j-1.6.4.jar"/>
+        <pathelement location="lib/jena/jena-arq-2.9.4.jar"/>
+        <pathelement location="lib/jena/jena-core-2.7.4.jar"/>
+        <pathelement location="lib/jena/jena-iri-0.9.4.jar"/>
+        <pathelement location="lib/jena/jena-tdb-0.9.4.jar"/>
+    </path>
+
+	<!-- Clean all output and perform all actions -->
+	<target depends="cleanall,export_jar,javadoc" name="all"/>
+
+	<target name="init">
+	    <mkdir dir="bin"/>
+	    <copy includeemptydirs="false" todir="bin">
+	        <fileset dir="src">
+	            <exclude name="**/*.java"/>
+	        </fileset>
+	    </copy>
+	</target>
+
+	<target name="clean">
+		<echo message="Removing 'bin' directory"/>
+        <delete dir="bin"/>
+    </target>
+
+	<target name="cleandoc">
+		<echo message="Removing 'doc' directory"/>
+		<delete dir="doc"/>
+	</target>
+
+	<target name="cleandist">
+		<echo message="Removing 'dist' directory"/>
+		<delete dir="dist"/>
+	</target>
+
+    <target depends="clean,cleandoc,cleandist" name="cleanall"/>
+
+	<target depends="init" name="build">
+        <echo message="Building Topology Editor backend"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="JavaBackend.classpath"/>
+        </javac>
+    </target>
+
+	<target depends="cleandist" name="prepare_export">
+		<!-- Create the export directory -->
+		<echo message="Creating 'dist' directory"/>
+		<mkdir dir="${exportDir}"/>
+	</target>
+
+	<target depends="build,prepare_export" name="export_jar">
+		<!-- Copy library files to export directory -->
+		<echo message="Copying library JARs to '${exportDir}/lib' directory"/>
+    	<copy todir="${exportDir}/lib">
+    		<fileset dir="lib/" includes="*/*.jar"/>
+    	</copy>
+
+    	<!-- Copy resource files to export directory -->
+		<echo message="Copying resource files to '${exportDir}/res' directory"/>
+    	<copy todir="${exportDir}/res">
+    	    <fileset dir="res/"/>
+    	</copy>
+
+		<!-- Copy testbed install script, exec is needed to preserve executable flags -->
+		<echo message="Copying testbed install script 'testbed_install.sh' to '${exportDir}' directory"/>
+		<exec executable="cp">
+			<arg value="testbed_install.sh"/>
+			<arg value="${exportDir}/testbed_install.sh"/>
+		</exec>
+
+		<!-- Copy install script, exec is needed to preserve executable flags -->
+		<echo message="Copying install script 'install.sh' to '${exportDir}' directory"/>
+		<exec executable="cp">
+			<arg value="install.sh"/>
+			<arg value="${exportDir}/install.sh"/>
+		</exec>
+
+		<!-- Copy startup script, exec is needed to preserve executable flags -->
+		<echo message="Copying startup script 'visabackend.sh' to '${exportDir}' directory"/>
+		<exec executable="cp">
+			<arg value="visabackend.sh"/>
+			<arg value="${exportDir}/visabackend.sh"/>
+		</exec>
+
+		<echo message="Creating JAR file"/>
+		<jar destfile="${exportDir}/TEBackend.jar">
+        	<manifest>
+                <attribute name="Main-Class" value="de.decoit.visa.TEBackend"/>
+                <attribute name="Class-Path" value=". lib/ini4j/ini4j-0.5.2-SNAPSHOT.jar lib/json/JSON.jar lib/jena/log4j-1.2.16.jar lib/jena/slf4j-api-1.6.4.jar lib/jena/slf4j-log4j12-1.6.4.jar lib/jena/commons-codec-1.5.jar lib/jena/httpclient-4.1.2.jar lib/jena/httpcore-4.1.3.jar lib/jena/jena-arq-2.9.4.jar lib/jena/jena-core-2.7.4.jar lib/jena/jena-iri-0.9.4.jar lib/jena/jena-tdb-0.9.4.jar lib/jena/xercesImpl-2.10.0.jar lib/jena/xml-apis-1.4.01.jar lib/jena/jcl-over-slf4j-1.6.4.jar lib/snakeyaml/snakeyaml-1.11.jar lib/visa-protocol/VISAProtocol.jar lib/commons_lang/commons-lang3-3.1.jar"/>
+            </manifest>
+            <fileset dir="bin"/>
+        </jar>
+    </target>
+
+	<target depends="cleandoc" name="javadoc">
+		<echo message="Generating Javadoc for Topology Editor backend"/>
+		<javadoc destdir="doc" access="private" windowtitle="VISA Topologie Editor" use="true" verbose="false">
+			<classpath refid="JavaBackend.classpath"/>
+
+			<packageset dir="src" defaultexcludes="yes">
+				<include name="de/decoit/visa/**"/>
+			</packageset>
+
+			<bottom><![CDATA[<i>Copyright &#169; 2012-2013 DECOIT GmbH. All Rights Reserved.</i>]]></bottom>
+
+			<link href="http://download.oracle.com/javase/7/docs/api/"/>
+			<link href="http://jena.apache.org/documentation/javadoc/jena/"/>
+			<link href="http://jena.apache.org/documentation/javadoc/arq/"/>
+			<link href="http://jena.apache.org/documentation/javadoc/tdb/"/>
+			<link href="http://jena.apache.org/documentation/javadoc/sdb/"/>
+			<link href="http://jena.apache.org/documentation/javadoc/fuseki/"/>
+			<link href="http://jena.apache.org/documentation/javadoc/larq/"/>
+			<link href="http://snakeyamlrepo.appspot.com/releases/1.10/site/apidocs/"/>
+			<link href="http://commons.apache.org/proper/commons-lang//javadocs/api-release/"/>
+			<link href="http://logging.apache.org/log4j/1.2/apidocs/"/>
+		</javadoc>
+	</target>
+</project>

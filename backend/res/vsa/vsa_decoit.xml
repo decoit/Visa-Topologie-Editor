@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE vsatemplate SYSTEM "res/vsa/dtd/vsatemplate.dtd">
+
+<!-- XML description for the DECOIT VSA template -->
+<VSA name="VSA DECOIT" rdf="rdf/vsa_decoit.rdf">
+	<VSA_DESCRIPTION>
+		Description of VSA here
+	</VSA_DESCRIPTION>
+
+	<INTEGRATION>
+		<CONNECTION id="conn0" component="ubuntu-quantum_br-int" vlan="__vlan_1__" description="Internal VLAN 1" />
+		<CONNECTION id="conn1" component="ubuntu-quantum_br-int" vlan="__vlan_2__" description="Internal VLAN 2" />
+		<CONNECTION id="conn2" component="ubuntu-quantum_unknown" vlan="" description="Public network" />
+	</INTEGRATION>
+</VSA>

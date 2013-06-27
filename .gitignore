@@ -1,0 +1,27 @@
+# .gitignore for backend
+/backend/manifest.mf
+/backend/.classpath
+/backend/.project
+/backend/*.log*
+/backend/visabackend.sh
+/backend/testbed_install.sh
+/backend/bin/
+/backend/dist/
+/backend/doxygen/
+/backend/doc/
+/backend/layout/
+/backend/tdb/
+/backend/res/ssl/VISAKeyStore
+/backend/res/ssl/VISATrustStore
+
+# .gitignore for frontend
+/frontend/*.komodoproject
+/frontend/export/
+/frontend/import/
+
+# .gitignore for protocol
+/protocol/bin/
+/protocol/doc/
+/protocol/.classpath
+/protocol/.project
+/protocol/VISAProtocol.jar

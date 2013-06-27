@@ -1,0 +1,10 @@
+PREFIX visa: <http://visa-project.de/topology/>
+PREFIX visamod: <http://visa-project.de/topology/model/>
+
+SELECT DISTINCT ?g ?vlan ?id
+WHERE {
+	GRAPH ?g {
+		?if visa:vlan ?vlan .
+		?vlan visa:id ?id .
+	}
+}

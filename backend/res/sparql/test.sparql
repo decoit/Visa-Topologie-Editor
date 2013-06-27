@@ -1,0 +1,17 @@
+PREFIX visa: <http://visa-project.de/topology/>
+PREFIX visabackup: <http://visa-project.de/backup/>
+
+SELECT ?dev ?name ?type ?phys ?imgfile ?natgroup ?group
+WHERE {
+	?root visa:device ?dev .
+	?dev visa:name ?name .
+	?dev visa:type ?type .
+	?dev visa:physical ?phys .
+	?dev visa:imageFile ?imgfile .
+	OPTIONAL {
+		?dev visabackup:group ?natgroup .
+	}
+	OPTIONAL {
+		GRAPH visabackup:model { ?dev visabackup:group ?group . }
+	}
+}

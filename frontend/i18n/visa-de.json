@@ -1,0 +1,307 @@
+{
+	"title": "VISA Topologie Editor",
+	"headline": "Topologie Editor",
+	"topology": {
+		"title": "Topologie",
+		"conf": "Konfigurieren",
+		"iotool": "IO-Tool",
+		"rdf": "RDF/XML",
+		"network": "Netzwerk",
+		"reset": "Topologie zurücksetzen"
+	},
+	"options": {
+		"title": "Optionen",
+		"routing": "Wegfindung",
+		"names": "Namen anzeigen",
+		"vlans": "VLAN anzeigen",
+		"shutdown": "Backend herunterfahren",
+		"language": {
+			"label": "Sprache:",
+			"de": "Deutsch",
+			"en": "English"
+		}
+	},
+	"components": {
+		"title": "Komponenten",
+		"invvm": "Virtuelle Maschinen",
+		"invswitch": "Switches",
+		"newvm": "Neue VM",
+		"newswitch": "Neuer Switch",
+		"newvsa": "Neue VSA"
+	},
+	"trashtable": {
+		"bgleft": "trashtableLeftDE",
+		"bgright": "trashtableRightDE",
+		"oldbgleft": "trashtableLeftEN",
+		"oldbgright": "trashtableRightEN"
+	},
+	"editor": {
+		"title": "Editor"
+	},
+	"dialog": {
+		"alert": {
+			"ok": "OK",
+			"msg": {
+				"iotoolbusy": {
+					"title": "Fehler",
+					"msg": "Das IO-Tool bearbeitet bereits eine Anfrage und ist daher nicht erreichbar"
+				},
+				"novsatarget": {
+					"title": "Verbindungsziel fehlt",
+					"msg": "Es wurde nicht für alle Verbindungen der VSA ein Ziel angegeben. Operation abgebrochen."
+				},
+				"novsaname": {
+					"title": "Name fehlt",
+					"msg": "Es wurde kein Name für die VSA angegeben. Operation abgebrochen."
+				}
+			}
+		},
+		"confirm": {
+			"yes": "Ja",
+			"no": "Nein",
+			"msg": {
+				"remcomp": {
+					"title": "Komponente entfernen?",
+					"body1": "Soll die Komponente '",
+					"body2": "' wirklich entfernt werden? Dies kann nicht rückgängig gemacht werden!"
+				},
+				"shutdown": {
+					"title": "Backend herunterfahren?",
+					"body": "Soll das Editor Backend wirklich heruntergefahren werden? Der Editor kann danach nicht mehr verwendet werden bis das Backend erneut gestartet wurde!"
+				}
+			}
+		},
+		"createcomp": {
+			"title": "Komponente erstellen",
+			"propertybox": {
+				"title": "Eigenschaften",
+				"name": "Name",
+				"width": "Breite:",
+				"height": "Höhe:",
+				"sizeapply": "Übernehmen",
+				"help": "$ID$ wird durch interne ID ersetzt",
+				"ifnum": "Anzahl Interfaces",
+				"ifnumapply": "Übernehmen"
+			},
+			"interfacebox": {
+				"title": "Interfaces"
+			},
+			"buttons": {
+				"create": "Erstellen",
+				"cancel": "Abbrechen"
+			}
+		},
+		"createvsa": {
+			"title": "Neue VSA erstellen",
+			"selectbox": {
+				"title": "VSA-Typ",
+				"label": "VSA-Typ wählen",
+				"novsaoption": "Keine VSA Templates gefunden"
+			},
+			"propertybox": {
+				"title": "Eigenschaften",
+				"name": "Name:",
+				"connections": "Verbindungen",
+				"target": "Ziel:"
+			},
+			"buttons": {
+				"create": "Erstellen",
+				"cancel": "Abbrechen"
+			}
+		},
+		"cable": {
+			"title": "Detailansicht - Kabel",
+			"componentbox": {
+				"title": "Komponenten",
+				"from": "Von",
+				"to": "Nach"
+			},
+			"optionbox": {
+				"title": "Optionen",
+				"button": "Kabel entfernen"
+			},
+			"buttons": {
+				"close": "Schließen"
+			}
+		},
+		"topology": {
+			"title": "Topologie konfigurieren",
+			"name": {
+				"title": "Identifikation",
+				"topoid": "Topologie-ID:",
+				"toponame": "Name:"
+			},
+			"buttons": {
+				"ok": "OK",
+				"cancel": "Abbrechen"
+			}
+		},
+		"network": {
+			"title": "Netzwerk verwalten",
+			"newnetwork": {
+				"title": "Neues Subnetz",
+				"address": "Netzwerk IP Adresse:",
+				"subnet": "Subnetzmaske (CIDR):",
+				"version": "IP Version:",
+				"button": "Erstellen"
+			},
+			"existingnetwork": {
+				"title": "Vorhandene Subnetze",
+				"address": "IP Adresse",
+				"subnetmask": "Subnetzmaske",
+				"version": "IP Version",
+				"nonetwork": "Keine Subnetze gefunden"
+			},
+			"newvlan": {
+				"title": "Neues VLAN",
+				"name": "Name:",
+				"color": "Farbe (#RRGGBB):",
+				"button": "Erstellen"
+			},
+			"editvlan": {
+				"title": "VLAN bearbeiten",
+				"name": "Name:",
+				"color": "Farbe (#RRGGBB):",
+				"buttons": {
+					"save": "Speichern",
+					"cancel": "Abbrechen"
+				}
+			},
+			"existingvlan": {
+				"title": "Vorhandene VLANs",
+				"name": "Name",
+				"color": "Farbe",
+				"ifcount": "# Switch-Interfaces",
+				"novlan": "Keine VLANs gefunden",
+				"edit": "Bearbeiten",
+				"remove": "Entfernen"
+			},
+			"buttons": {
+				"close": "Schließen"
+			}
+		},
+		"iotool": {
+			"title": "IO-Tool",
+			"hostname": "Hostname / IP-Adresse",
+			"port": "Portnummer",
+			"connbutton": "Verbinden",
+			"connto": "Verbunden mit:",
+			"disconnbutton": "Trennen",
+			"topolist": "Topologien",
+			"loadbutton": "Laden",
+			"savebutton": "Speichern",
+			"removebutton": "Entfernen",
+			"replicatebutton": "Replizieren",
+			"demonstrator": "Demonstrator",
+			"collectbutton": "Erheben",
+			"cleanupbutton": "Bereinigen",
+			"resetbutton": "Zurücksetzen"
+		},
+		"rdf": {
+			"title": "RDF/XML",
+			"importbox": {
+				"title": "Importieren",
+				"button": "RDF/XML Datei hochladen",
+				"replace": "Topologie ersetzen",
+				"append": "In Topologie integrieren"
+			},
+			"exportbox": {
+				"title": "Exportieren",
+				"filename": "Dateiname",
+				"button": "Exportieren",
+				"status": {
+					"title": "Status",
+					"notexported": "nicht exportiert",
+					"notuptodate": "exportiert, nicht aktuell",
+					"uptodate": "exportiert und aktuell"
+				},
+				"download": {
+					"title": "Herunterladen",
+					"button": "Herunterladen"
+				}
+			},
+			"buttons": {
+				"close": "Schließen"
+			}
+		},
+		"comp": {
+			"title": "Komponente konfigurieren",
+			"identbox": {
+				"title": "Identifikation",
+				"name": "Hostname:",
+				"id": "ID:",
+				"type": "Typ:",
+				"types": {
+					"switch": "Switch",
+					"host": "Physikalischer Host",
+					"vm": "Virtuelle Maschine"
+				}
+			},
+			"ifbox": {
+				"title": "Interfaces",
+				"newinterfacetitle": "Neues Interface",
+				"newinterface": "Interface hinzufügen",
+				"ipaddress": "IP-Adresse",
+				"linklocal": "Link-local",
+				"network": "Netzwerk",
+				"orientation": "Ausrichtung",
+				"orientations": {
+					"top": "oben",
+					"bottom": "unten",
+					"left": "links",
+					"right": "rechts"
+				},
+				"vlan": "VLAN",
+				"vlanedit": "Bearbeiten"
+			},
+			"buttons": {
+				"ok": "OK",
+				"cancel": "Abbrechen"
+			},
+			"vlanassign": {
+				"diagtitle": "VLAN-Zuordnung ändern",
+				"title": "Vorhandene VLANs",
+				"compname": "Komponente:",
+				"ifname": "Interface:",
+				"buttons": {
+					"save": "Speichern",
+					"cancel": "Abbrechen"
+				}
+			}
+		},
+		"reset": {
+			"title": "Topologie zurücksetzen",
+			"clearbox": {
+				"title": "Topologie leeren",
+				"radio": "Topologie leeren"
+			},
+			"statebox": {
+				"title": "Auf Zustand zurücksetzen",
+				"nostates": "Es existieren keine gespeicherten Zustände",
+				"importof": "Import von"
+			},
+			"buttons": {
+				"ok": "OK",
+				"cancel": "Abbrechen"
+			}
+		}
+	},
+	"blockui": {
+		"reset": {
+			"title": "Bitte warten",
+			"text": "Das Editor Backend wird zurückgesetzt. Die Seite wird nach Abschluss neu geladen."
+		},
+		"nobackend": {
+			"title": "Editor Backend nicht erreichbar",
+			"text": "Das Editor Backend ist nicht erreichbar. Bitte das Backend starten und Seite neu laden."
+		},
+		"buildtopology": {
+			"title": "Bitte warten",
+			"text": "Verarbeite Topologieinformationen, dies kann einige Zeit dauern..."
+		},
+		"iotoolcomm": {
+			"title": "Bitte warten",
+			"text": "Der Editor kommuniziert mit dem IO-Tool, dies kann einige Zeit dauern..."
+		}
+	}
+}

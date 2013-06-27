@@ -1,0 +1,14 @@
+PREFIX visa: <http://visa-project.de/topology/>
+
+SELECT DISTINCT ?netaddr ?netmask
+WHERE {
+	$S_MOD$
+	<$URI$> visa:interface ?if .
+	OPTIONAL {
+		?if visa:address ?addr .
+		?addr visa:network ?net .
+		?net visa:value ?netaddr .
+		?net visa:netmaskLength ?netmask .
+	}
+	$E_MOD$
+}

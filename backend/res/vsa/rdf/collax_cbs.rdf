@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="http://visa-project.de/topology/__vsa_collax__">
+    <ns0:internalName xmlns:ns0="http://visa-project.de/topology/">__vsa_collax__</ns0:internalName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__vsa_collax__">
+    <ns0:name xmlns:ns0="http://visa-project.de/topology/">collax</ns0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__vsa_collax__">
+    <ns0:device xmlns:ns0="http://visa-project.de/topology/" rdf:resource="http://visa-project.de/topology/collax_cbs"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/__vsa_collax__">
+    <ns0:device xmlns:ns0="http://visa-project.de/topology/" rdf:resource="http://visa-project.de/topology/switch"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/collax_cbs">
+    <ns0:name xmlns:ns0="http://visa-project.de/topology/">collax_cbs</ns0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/collax_cbs">
+    <ns0:type xmlns:ns0="http://visa-project.de/topology/">host</ns0:type>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/collax_cbs">
+    <ns0:physical xmlns:ns0="http://visa-project.de/topology/">false</ns0:physical>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/collax_cbs">
+    <ns0:imageFile xmlns:ns0="http://visa-project.de/topology/"></ns0:imageFile>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/collax_cbs">
+    <ns0:interface xmlns:ns0="http://visa-project.de/topology/" rdf:resource="http://visa-project.de/topology/collax_cbs___eth0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/collax_cbs___eth0">
+    <ns0:internalIdentifier xmlns:ns0="http://visa-project.de/topology/">eth0</ns0:internalIdentifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/collax_cbs___eth0">
+    <ns0:name xmlns:ns0="http://visa-project.de/topology/">collax_cbs___eth0</ns0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/collax_cbs___eth0">
+    <ns0:connected xmlns:ns0="http://visa-project.de/topology/" rdf:resource="http://visa-project.de/topology/switch___int1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/switch">
+    <ns0:name xmlns:ns0="http://visa-project.de/topology/">collax_cbs_switch</ns0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/switch">
+    <ns0:type xmlns:ns0="http://visa-project.de/topology/">switch</ns0:type>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/switch">
+    <ns0:physical xmlns:ns0="http://visa-project.de/topology/">false</ns0:physical>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/switch">
+    <ns0:imageFile xmlns:ns0="http://visa-project.de/topology/"></ns0:imageFile>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/switch">
+    <ns0:interface xmlns:ns0="http://visa-project.de/topology/" rdf:resource="http://visa-project.de/topology/switch___int1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/switch___int1">
+    <ns0:internalIdentifier xmlns:ns0="http://visa-project.de/topology/">int1</ns0:internalIdentifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/switch___int1">
+    <ns0:name xmlns:ns0="http://visa-project.de/topology/">switch___int1</ns0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://visa-project.de/topology/switch___int1">
+    <ns0:connected xmlns:ns0="http://visa-project.de/topology/" rdf:resource="http://visa-project.de/topology/collax_cbs___eth0"/>
+  </rdf:Description>
+</rdf:RDF>

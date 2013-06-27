@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>AJAX Testing Suite</title>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">
+	window.onload = function() {
+		document.getElementById('submit').onclick = function() {
+			$.ajax({
+            	url: $('#request').val(),
+            	type: 'GET',
+            	cache: false,
+            	async: false,
+            	success: function (html) {
+                	document.getElementById('result').innerHTML = html;
+            	}
+        	});
+		};
+	};
+</script>
+</head>
+
+<body>
+
+<label for="request">Request path and query string</label>
+<input id="request" type="text" />
+<input id="submit" type="button" value="Send" />
+<div>
+<h2>Result:</h2>
+<p id="result"></p>
+</div>
+</body>
+</html>

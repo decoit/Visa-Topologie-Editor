@@ -1,0 +1,17 @@
+PREFIX visa: <http://visa-project.de/topology/>
+
+SELECT ?addrtype ?addrip ?nettype ?netip ?netmask
+WHERE {
+	$S_MOD$
+	<$URI$> visa:address ?addr .
+	?addr visa:type ?addrtype .
+	?addr visa:value ?addrip .
+	OPTIONAL {
+		?addr visa:network ?net .
+		?net visa:type ?nettype .
+		?net visa:value ?netip .
+		?net visa:netmaskLength ?netmask .
+	}
+	$E_MOD$
+	FILTER (?addrtype = "ipv4" || ?addrtype = "ipv6")
+}

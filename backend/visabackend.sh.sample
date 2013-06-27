@@ -1,0 +1,19 @@
+#!/bin/bash
+JAVA="$(which java)"
+
+# Resolve all symlink to get the absolute path to the script and jar file
+SOURCE="${BASH_SOURCE[0]}"
+DIR="$( dirname "$SOURCE" )"
+while [ -h "$SOURCE" ]
+do
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+  DIR="$( cd -P "$( dirname "$SOURCE"  )" && pwd )"
+done
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+# Change working directory
+cd $DIR
+
+# Run backend jar
+$JAVA -jar -Xms256m -Xmx1024m $DIR/TEBackend.jar --sslkey '' --sslkeyp '' --ssltrust '' --ssltrustp '' "$@"

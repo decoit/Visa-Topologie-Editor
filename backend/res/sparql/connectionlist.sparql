@@ -1,0 +1,8 @@
+PREFIX visa: <http://visa-project.de/topology/>
+
+SELECT DISTINCT ?sif ?oif
+WHERE {
+	$S_MOD$
+	?sif visa:connected ?oif .
+	$E_MOD$
+}

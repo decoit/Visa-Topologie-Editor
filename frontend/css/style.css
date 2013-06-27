@@ -1,0 +1,501 @@
+/*
+    Document   : style
+    Created on : 06.09.2012, 12:26:39
+    Author     : Thomas Rix
+    Description:
+        Stylesheet definitions for the
+        VISA Topology Editor
+*/
+
+/********************************************************************
+ *   Global tag definitions
+ ********************************************************************/
+body {
+	font-family: Arial;
+	font-size: 0.75em;
+	margin: 0px;
+	padding: 0px;
+}
+
+a:link, a:visited, a:active {
+    font-weight: normal;
+    text-decoration: none;
+    color: #3383bb;
+}
+
+a:hover {
+    font-weight: normal;
+    text-decoration: underline;
+    color: #000000;
+}
+
+h1 {
+    margin: 0px;
+    padding: 10px 0px 10px 20px;
+}
+
+h2 {
+    margin: 0px;
+    padding: 0px 20px 0px 20px;
+}
+
+h2.rightalign {
+    text-align: right;
+}
+
+h3 {
+    margin: 0px;
+    padding: 0px 20px 0px 20px;
+}
+
+label {
+	display: inline;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+select {
+	font-size: 11.9px !important;
+	/*padding: 1px 0px 1px 3px;*/
+	padding-top: 2px;
+	padding-bottom: 2px;
+	height: 26px !important;
+	margin-bottom: 0px;
+}
+
+input[type="text"] {
+	font-size: 11.9px !important;
+	/*padding: 1px 0px 1px 3px;*/
+	padding-top: 2px;
+	padding-bottom: 2px;
+	height: 20px !important;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+table {
+	border-spacing: 0px;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	text-align: left;
+}
+
+
+/********************************************************************
+ *   Global ID definitions
+ ********************************************************************/
+#pagecontainer {
+	margin: 0px;
+	padding: 5px;
+	width: 1910px !important;
+}
+
+#componentpane {
+    margin-top: 10px;
+}
+
+#inventorytabs {
+	padding: 5px 0px 5px 5px;
+}
+
+#dragcontainment {
+	border: 1px solid #000000;
+}
+
+#dialogs {
+	display: none;
+}
+
+#networkDialogNewVersion {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#rdfDialogStatus {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#rdfDialogUploadStatus {
+	margin-top: 0px;
+	margin-bottom: 0px;
+
+	display: none;
+}
+
+#componentDialogIfList {
+	height: 800px;
+	overflow-y: scroll;
+}
+
+/********************************************************************
+ *   Global class definitions
+ ********************************************************************/
+.visalogo {
+	border: none;
+	float: left;
+	padding: 5px 0px 5px 20px;
+}
+
+.headline {
+	float: left;
+}
+
+.statusOKText {
+	color: #00CC00;
+}
+
+.statusErrorText {
+	color: #DD0000;
+}
+
+.selectMarginBottom {
+	margin-bottom: 5px;
+}
+
+.trborder {
+	border: 1px solid #000000;
+}
+
+.component {
+	border: 0px solid #FFFFFF;
+	background-color: #000000;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	font-size: 11px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.componentGroup {
+	border: 0px solid #FFFFFF;
+	background-color: #000000;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	color: #FFFFFF;
+	width: 100px;
+	height: 100px;
+}
+
+.dragcontainment {
+	background-color: #BBBBBB;
+	/*background-color: transparent;*/
+	float: left;
+
+	margin: 10px 0px 10px 7px;
+    padding: 0px;
+}
+
+.subgridDragcontainment {
+	background-color: #BBBBBB;
+	/*background-color: transparent;*/
+	float: left;
+
+	margin: 0px;
+    padding: 0px;
+}
+
+.subgridInventory {
+	padding: 5px;
+}
+
+.dragBoxHighlight {
+	background-color: rgba(255, 0, 0, 0.3);
+}
+
+.mouseEventDummy {
+	position: absolute;
+	background-color: transparent;
+	/*background-color: #000000;*/
+	opacity: 0.3;
+	width: 10px;
+	height: 10px;
+}
+
+.pagehead {
+    margin-bottom: 10px;
+}
+
+.spacer {
+    border: 0px solid #FFFFFF;
+    background-color: transparent;
+    float: left;
+    width: 10px;
+    height: 10px;
+}
+
+.invtable {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.topologypane {
+	float: left;
+    /*margin-top: 10px;*/
+	width: 28%;
+}
+
+.optionspane {
+	float: left;
+	margin-left: 10px;
+    /*margin-top: 10px;*/
+	width: 1365px;
+}
+
+.topooptioncontent {
+	height: 45px;
+}
+
+.optionbox {
+	float: left;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+.editor {
+    margin-top: 10px;
+}
+
+.edittable {
+	float: left;
+
+	background-color: #e0e0e0;
+    border-collapse: collapse;
+    border: none;
+    border-spacing: 0px;
+}
+
+.edittable tr {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.edittable td {
+    border: none;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.portimg {
+    border: none;
+    float: left;
+    width: 10px;
+    height: 10px;
+}
+
+.portconnector {
+	position: absolute;
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+}
+
+.portconnectorHighlight {
+	position: absolute;
+    background-color: #FFFF00;
+    width: 10px;
+    height: 10px;
+}
+
+.portconnUp {
+	background-image: url(../res/img/arrow_top.png);
+	background-repeat: no-repeat;
+	background-position: 0px 2px;
+}
+
+.portconnDown {
+	background-image: url(../res/img/arrow_bottom.png);
+	background-repeat: no-repeat;
+	background-position: 0px -2px;
+}
+
+.portconnLeft {
+	background-image: url(../res/img/arrow_left.png);
+	background-repeat: no-repeat;
+	background-position: 2px 0px;
+}
+
+.portconnRight {
+	background-image: url(../res/img/arrow_right.png);
+	background-repeat: no-repeat;
+	background-position: -2px 0px;
+}
+
+.portconnUpVirt {
+	background-image: url(../res/img/arrow_blue_top.png);
+	background-repeat: no-repeat;
+	background-position: 0px 2px;
+}
+
+.portconnDownVirt {
+	background-image: url(../res/img/arrow_blue_bottom.png);
+	background-repeat: no-repeat;
+	background-position: 0px -2px;
+}
+
+.portconnLeftVirt {
+	background-image: url(../res/img/arrow_blue_left.png);
+	background-repeat: no-repeat;
+	background-position: 2px 0px;
+}
+
+.portconnRightVirt {
+	background-image: url(../res/img/arrow_blue_right.png);
+	background-repeat: no-repeat;
+	background-position: -2px 0px;
+}
+
+.cable {
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+}
+
+.cableHighlight {
+	background-color: #FFD400;
+}
+
+.obstacle {
+	/*background-color: #00FF00;*/
+    background-color: transparent;
+}
+
+.cableCorner {
+    background-color: #FFFF00;
+}
+
+.cableCornerAllowed {
+	background-color: #000000 !important;
+}
+
+.cableCornerNotAllowed {
+	background-color: #FF0000 !important;
+}
+
+.cableCornerImg {
+	background-image: url(../res/img/cable_corner.png)  !important;
+}
+
+.cableVerticalImg {
+	background-image: url(../res/img/cable_vert.png)  !important;
+}
+
+.cableHorizontalImg {
+	background-image: url(../res/img/cable_horz.png)  !important;
+}
+
+.cableCrossImg {
+	background-image: url(../res/img/cable_cross.png)  !important;
+}
+
+.cableVerticalImgVirt {
+	background-image: url(../res/img/cable_double_vert.png)  !important;
+}
+
+.cableHorizontalImgVirt {
+	background-image: url(../res/img/cable_double_horz.png)  !important;
+}
+
+.cableCrossImgVirt {
+	background-image: url(../res/img/cable_double_cross.png)  !important;
+}
+
+.cableCrossImgVirtHorizontal {
+	background-image: url(../res/img/cable_double_cross_horz.png)  !important;
+}
+
+.cableCrossImgVirtVertical {
+	background-image: url(../res/img/cable_double_cross_vert.png)  !important;
+}
+
+.tmpPath {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.newPath {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.staticDialogContent {
+	position: static !important;
+}
+
+.dialogWidget {
+	margin-bottom: 5px;
+}
+
+.dialogWidgetHeader {
+	padding-left: 3px;
+}
+
+.dialogWidgetContent {
+	padding: 0px 3px 5px 3px;
+}
+
+.dialogWidgetEditor {
+	padding: 0px;
+}
+
+.dialogSubWidgetHead {
+	margin-top: 3px;
+}
+
+.dialogHeadline {
+	font-size: 1em;
+	font-weight: bold;
+	margin-bottom: 0.2px;
+}
+
+.dialogInfoText {
+	margin-left: 10px;
+}
+
+.logConsole {
+	background-color: #000000;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	width: 700px;
+	height: 200px;
+}
+
+.logLine {
+	margin: 0px 0px 0px 5px;
+	padding: 0px;
+
+	line-height: 15px;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+
+.vlanListColorBox {
+	float: left;
+	margin: 4px 2px 0px 0px;
+
+	width: 6px;
+	height: 6px;
+	border: 1px solid #777777;
+}
+
+.vlanListText {
+	float: left;
+}
+
+
+/********************************************************************
+ *   Override jQuery UI classes
+ ********************************************************************/
+.ui-draggable-disabled {
+	opacity: 0.5 !important;
+}

@@ -1,0 +1,13 @@
+PREFIX visa: <http://visa-project.de/topology/>
+
+SELECT DISTINCT ?nwaddr ?nwmask ?nwtype
+WHERE {
+	$S_MOD$
+	?addr visa:network ?network .
+	?network visa:value ?nwaddr .
+	?network visa:type ?nwtype .
+	OPTIONAL {
+		?network visa:netmaskLength ?nwmask .
+	}
+	$E_MOD$
+}

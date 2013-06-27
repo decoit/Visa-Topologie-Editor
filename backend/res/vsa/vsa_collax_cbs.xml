@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE vsatemplate SYSTEM "res/vsa/dtd/vsatemplate.dtd">
+
+<!-- XML description for the COLLAX CBS template -->
+<VSA name="VSA COLLAX CBS" rdf="rdf/collax_cbs.rdf">
+	<VSA_DESCRIPTION>
+		Collax CBS
+	</VSA_DESCRIPTION>
+
+	<INTEGRATION>
+		<CONNECTION id="conn0" component="switch" description="Connection to VSA device" />
+	</INTEGRATION>
+</VSA>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE vsatemplate SYSTEM "res/vsa/dtd/vsatemplate.dtd">
+
+<!-- XML description for the COLLAX CSG template -->
+<VSA name="VSA COLLAX CSG" rdf="rdf/collax_csg.rdf">
+	<VSA_DESCRIPTION>
+		Collax CSG
+	</VSA_DESCRIPTION>
+
+	<INTEGRATION>
+		<CONNECTION id="conn0" component="switch" description="Connection to VSA device" />
+	</INTEGRATION>
+</VSA>
