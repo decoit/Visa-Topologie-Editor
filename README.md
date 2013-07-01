@@ -1,4 +1,12 @@
-![VISa](http://www.decoit.de/cms/upload/logos/forschungsprojekte/visa-logo_200.png)	![DECOIT GmbH](http://www.decoit.de/cms/decoit_v3_images/logo.png)  
+<table>
+    <tr>
+        <td>![VISA](http://www.decoit.de/cms/upload/logos/forschungsprojekte/visa-logo_200.png)</td>
+        <td></td>
+        <td>![DECOIT GmbH](http://www.decoit.de/cms/decoit_v3_images/logo.png)</td>
+    </tr>
+</table>
+
+	  
 Visa-Topologie-Editor
 =====================
 
