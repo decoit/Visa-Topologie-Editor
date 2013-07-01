@@ -2,7 +2,7 @@
     <tr>
         <td> <img src="http://www.decoit.de/cms/upload/logos/forschungsprojekte/visa-logo_200.png" alt="VISA"></td>
         <td></td>
-        <td> ![DECOIT GmbH](http://www.decoit.de/cms/decoit_v3_images/logo.png) </td>
+        <td> <img alt="DECOIT GmbH" src="http://www.decoit.de/cms/decoit_v3_images/logo.png" </td>
     </tr>
 </table>
 
