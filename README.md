@@ -1,5 +1,4 @@
-![DECOIT GmbH](http://de.gravatar.com/userimage/52275094/fc1be8be3c3d5652eb76d5f9a48e5a4d.png)
-
+![DECOIT GmbH](http://www.decoit.de/cms/decoit_v3_images/logo.png)
 Visa-Topologie-Editor
 =====================
 
