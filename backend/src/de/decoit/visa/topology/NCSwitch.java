@@ -1,3 +1,22 @@
+/*
+ *  Copyright (C) 2013, DECOIT GmbH
+ *
+ *	This file is part of VISA Topology-Editor.
+ *
+ *	VISA Topology-Editor is free software: you can redistribute it and/or modify
+ *	it under the terms of the GNU General Public License as published by the
+ *	Free Software Foundation, either version 3 of the License, or (at your option)
+ *	any later version.
+ *
+ *	VISA Topology-Editor is distributed in the hope that it will be useful, but
+ *	WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ *	or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+ *	more details.
+ *
+ *	You should have received a copy of the GNU General Public License along with
+ *	VISA Topology-Editor. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package de.decoit.visa.topology;
 
 import java.util.ArrayList;
@@ -134,7 +153,7 @@ public class NCSwitch extends NetworkComponent {
 						gs = groupSwitches.get(group);
 					}
 
-					// Add the real inteface to the group switch
+					// Add the real interface to the group switch
 					gs.addInterface(ifEntry.getValue());
 				}
 				else {
@@ -575,17 +594,10 @@ public class NCSwitch extends NetworkComponent {
 			rv.put("name", sb.toString());
 
 			JSONObject confJSON = new JSONObject();
-//			confJSON.put("vInterface", virtInterface.toJSON());
 			confJSON.put("compOffset", componentInterfaceOffset.toJSON());
 			confJSON.put("compDim", componentDimensions.toJSON());
 			confJSON.put("dragDim", dragboxDimensions.toJSON());
 			confJSON.put("gloc", gridLocation.toJSON());
-
-//			JSONObject ifJSON = new JSONObject();
-//			for(Interface iface : interfaces) {
-//				ifJSON.put(iface.getIdentifier(), iface.toJSON());
-//			}
-//			confJSON.put("interfaces", ifJSON);
 
 			// Add the virtual interface to the JSONObject
 			JSONObject vIfJSON = new JSONObject();
@@ -669,40 +681,17 @@ public class NCSwitch extends NetworkComponent {
 		 * Calculate the size of the dragbox which surrounds this component. The
 		 * calculation takes into account the component dimensions, globally set
 		 * the component margin, the interface orientations and some extra space
-		 * to prevent multiple components from forming unpassable walls.
+		 * to prevent multiple components from forming impassable walls.
 		 */
 		private void calcDragboxDimensions() {
 			PortOrientation ori = null;
-
-//			switch(virtInterface.connectedTo.getOrientation()) {
-//				case TOP:
-//					ori = PortOrientation.BOTTOM;
-//					componentDimensions = new Dimension2D(interfaces.size(), 3);
-//					virtInterface.setOrientation(PortOrientation.TOP);
-//					break;
-//				case RIGHT:
-//					ori = PortOrientation.LEFT;
-//					componentDimensions = new Dimension2D(3, interfaces.size());
-//					virtInterface.setOrientation(PortOrientation.RIGHT);
-//					break;
-//				case BOTTOM:
-//					ori = PortOrientation.TOP;
-//					componentDimensions = new Dimension2D(interfaces.size(), 3);
-//					virtInterface.setOrientation(PortOrientation.BOTTOM);
-//					break;
-//				case LEFT:
-//					ori = PortOrientation.RIGHT;
-//					componentDimensions = new Dimension2D(3, interfaces.size());
-//					virtInterface.setOrientation(PortOrientation.LEFT);
-//					break;
-//			}
 
 			ori = PortOrientation.TOP;
 			virtInterface.setOrientation(PortOrientation.BOTTOM);
 			componentDimensions = new Dimension2D(interfaces.size(), 3);
 
 			// Calculate dragbox dimensions, add 2 at the end to make sure
-			// components cannot form an unpassable wall
+			// components cannot form an impassable wall
 			int x = componentDimensions.getX() + TEBackend.getComponentMargin() * 2 + 2;
 			int y = componentDimensions.getY() + TEBackend.getComponentMargin() * 2 + 2;
 

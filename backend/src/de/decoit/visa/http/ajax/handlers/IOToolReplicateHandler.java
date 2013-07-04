@@ -1,3 +1,22 @@
+/*
+ *  Copyright (C) 2013, DECOIT GmbH
+ *
+ *	This file is part of VISA Topology-Editor.
+ *
+ *	VISA Topology-Editor is free software: you can redistribute it and/or modify
+ *	it under the terms of the GNU General Public License as published by the
+ *	Free Software Foundation, either version 3 of the License, or (at your option)
+ *	any later version.
+ *
+ *	VISA Topology-Editor is distributed in the hope that it will be useful, but
+ *	WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ *	or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+ *	more details.
+ *
+ *	You should have received a copy of the GNU General Public License along with
+ *	VISA Topology-Editor. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package de.decoit.visa.http.ajax.handlers;
 
 import java.io.IOException;
@@ -16,7 +35,7 @@ import de.decoit.visa.http.ajax.AJAXServer;
  * the simulation environment.<br>
  * <br>
  * On success, a JSON object will be returned containing the return code and
- * message of the IO-Tool reponse (keys: returncode and message). The return
+ * message of the IO-Tool response (keys: returncode and message). The return
  * code and message keys will also be present in an 'ajaxGeneral' reply.<br>
  * <br>
  * Any exception thrown during the processing of the request will cause the

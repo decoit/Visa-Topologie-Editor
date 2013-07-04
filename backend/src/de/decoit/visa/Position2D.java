@@ -1,3 +1,22 @@
+/*
+ *  Copyright (C) 2013, DECOIT GmbH
+ *
+ *	This file is part of VISA Topology-Editor.
+ *
+ *	VISA Topology-Editor is free software: you can redistribute it and/or modify
+ *	it under the terms of the GNU General Public License as published by the
+ *	Free Software Foundation, either version 3 of the License, or (at your option)
+ *	any later version.
+ *
+ *	VISA Topology-Editor is distributed in the hope that it will be useful, but
+ *	WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ *	or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+ *	more details.
+ *
+ *	You should have received a copy of the GNU General Public License along with
+ *	VISA Topology-Editor. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package de.decoit.visa;
 
 import java.util.Comparator;
@@ -10,7 +29,7 @@ import de.decoit.visa.interfaces.IJSON;
  * This class represents a position on a two dimensional coordinate grid. By
  * using the member class CoordinateRange it can be limited to accept only
  * coordinates inside the set ranges. It provides member Comparator classes for
- * comparision of X and Y coordinates.
+ * comparison of X and Y coordinates.
  *
  * @author Thomas Rix
  */
@@ -44,7 +63,7 @@ public class Position2D implements IJSON {
 	 * @param pGridDim Grid dimension object, cannot be null
 	 */
 	public Position2D(int pX, int pY, Dimension2D pGridDim) {
-		// Grid dimension - 1 is neccessary since pGridDim contains numbers of
+		// Grid dimension - 1 is necessary since pGridDim contains numbers of
 		// rows/cols but we start counting at 0
 		this(pX, pY, new CoordinateRange(0, pGridDim.getX() - 1), new CoordinateRange(0, pGridDim.getY() - 1));
 	}
@@ -258,8 +277,8 @@ public class Position2D implements IJSON {
 
 	/**
 	 * This Comparator implementation allows comparison of two Position2D
-	 * objects. It will use the horizontal (X) coordinates for comparision. The
-	 * result follows the Integer comparision: 0 if both values are identical,
+	 * objects. It will use the horizontal (X) coordinates for comparison. The
+	 * result follows the Integer comparison: 0 if both values are identical,
 	 * negative if the second value is greater and positive if it is less than
 	 * the first value.
 	 *
@@ -276,8 +295,8 @@ public class Position2D implements IJSON {
 
 	/**
 	 * This Comparator implementation allows comparison of two Position2D
-	 * objects. It will use the vertical (Y) coordinates for comparision. The
-	 * result follows the Integer comparision: 0 if both values are identical,
+	 * objects. It will use the vertical (Y) coordinates for comparison. The
+	 * result follows the Integer comparison: 0 if both values are identical,
 	 * negative if the second value is greater and positive if it is less than
 	 * the first value.
 	 *

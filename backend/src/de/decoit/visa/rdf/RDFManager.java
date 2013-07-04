@@ -1,3 +1,22 @@
+/*
+ *  Copyright (C) 2013, DECOIT GmbH
+ *
+ *	This file is part of VISA Topology-Editor.
+ *
+ *	VISA Topology-Editor is free software: you can redistribute it and/or modify
+ *	it under the terms of the GNU General Public License as published by the
+ *	Free Software Foundation, either version 3 of the License, or (at your option)
+ *	any later version.
+ *
+ *	VISA Topology-Editor is distributed in the hope that it will be useful, but
+ *	WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ *	or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+ *	more details.
+ *
+ *	You should have received a copy of the GNU General Public License along with
+ *	VISA Topology-Editor. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package de.decoit.visa.rdf;
 
 import java.io.BufferedReader;
@@ -894,7 +913,7 @@ public class RDFManager {
 					NetworkComponent.Interface np = (NetworkComponent.Interface) pObj;
 
 					// Remove existing address property
-					// Casting null pointer to RDFNode...weird but neccessary:
+					// Casting null pointer to RDFNode...weird but necessary:
 					// http://www.dehora.net/journal/2004/08/jena_simpleselector_hmm_oops_ah_ugh.html
 					List<Statement> stmtList = mod.listStatements(new SimpleSelector(obj, pProp, (RDFNode) null)).toList();
 					for(Statement stmt : stmtList) {
@@ -918,7 +937,7 @@ public class RDFManager {
 					NetworkComponent.Interface np = (NetworkComponent.Interface) pObj;
 
 					// Remove existing vlan property
-					// Casting null pointer to RDFNode...weird but neccessary:
+					// Casting null pointer to RDFNode...weird but necessary:
 					// http://www.dehora.net/journal/2004/08/jena_simpleselector_hmm_oops_ah_ugh.html
 					List<Statement> stmtList = mod.listStatements(new SimpleSelector(obj, pProp, (RDFNode) null)).toList();
 					for(Statement stmt : stmtList) {
@@ -942,7 +961,7 @@ public class RDFManager {
 					Literal idLit = mod.createLiteral(String.valueOf(vlan.getID()));
 
 					// Remove existing id property
-					// Casting null pointer to RDFNode...weird but neccessary:
+					// Casting null pointer to RDFNode...weird but necessary:
 					// http://www.dehora.net/journal/2004/08/jena_simpleselector_hmm_oops_ah_ugh.html
 					mod.removeAll(obj, pProp, (RDFNode) null).add(obj, pProp, idLit);
 				}
@@ -957,7 +976,7 @@ public class RDFManager {
 					NetworkComponent nc = (NetworkComponent) pObj;
 
 					// Remove existing compDimX property
-					// Casting null pointer to RDFNode...weird but neccessary:
+					// Casting null pointer to RDFNode...weird but necessary:
 					// http://www.dehora.net/journal/2004/08/jena_simpleselector_hmm_oops_ah_ugh.html
 					backupMod.removeAll(obj, pProp, (RDFNode) null);
 
@@ -975,7 +994,7 @@ public class RDFManager {
 					NetworkComponent nc = (NetworkComponent) pObj;
 
 					// Remove existing compDimY property
-					// Casting null pointer to RDFNode...weird but neccessary:
+					// Casting null pointer to RDFNode...weird but necessary:
 					// http://www.dehora.net/journal/2004/08/jena_simpleselector_hmm_oops_ah_ugh.html
 					backupMod.removeAll(obj, pProp, (RDFNode) null);
 
@@ -993,7 +1012,7 @@ public class RDFManager {
 					NetworkComponent nc = (NetworkComponent) pObj;
 
 					// Remove existing compLocX property
-					// Casting null pointer to RDFNode...weird but neccessary:
+					// Casting null pointer to RDFNode...weird but necessary:
 					// http://www.dehora.net/journal/2004/08/jena_simpleselector_hmm_oops_ah_ugh.html
 					backupMod.removeAll(obj, pProp, (RDFNode) null);
 
@@ -1013,7 +1032,7 @@ public class RDFManager {
 					NetworkComponent nc = (NetworkComponent) pObj;
 
 					// Remove existing compLocY property
-					// Casting null pointer to RDFNode...weird but neccessary:
+					// Casting null pointer to RDFNode...weird but necessary:
 					// http://www.dehora.net/journal/2004/08/jena_simpleselector_hmm_oops_ah_ugh.html
 					backupMod.removeAll(obj, pProp, (RDFNode) null);
 
@@ -1033,7 +1052,7 @@ public class RDFManager {
 					NetworkComponent.Interface nci = (NetworkComponent.Interface) pObj;
 
 					// Remove existing orientation property
-					// Casting null pointer to RDFNode...weird but neccessary:
+					// Casting null pointer to RDFNode...weird but necessary:
 					// http://www.dehora.net/journal/2004/08/jena_simpleselector_hmm_oops_ah_ugh.html
 					backupMod.removeAll(obj, pProp, (RDFNode) null);
 
@@ -1051,7 +1070,7 @@ public class RDFManager {
 					VLAN vlan = (VLAN) pObj;
 
 					// Remove existing property
-					// Casting null pointer to RDFNode...weird but neccessary:
+					// Casting null pointer to RDFNode...weird but necessary:
 					// http://www.dehora.net/journal/2004/08/jena_simpleselector_hmm_oops_ah_ugh.html
 					backupMod.removeAll(obj, pProp, (RDFNode) null);
 
@@ -1069,7 +1088,7 @@ public class RDFManager {
 					VLAN vlan = (VLAN) pObj;
 
 					// Remove existing property
-					// Casting null pointer to RDFNode...weird but neccessary:
+					// Casting null pointer to RDFNode...weird but necessary:
 					// http://www.dehora.net/journal/2004/08/jena_simpleselector_hmm_oops_ah_ugh.html
 					backupMod.removeAll(obj, pProp, (RDFNode) null);
 
@@ -1612,7 +1631,7 @@ public class RDFManager {
 
 				// Remove the 'connected' statement using this subject as object
 				// ('connected' properties always exist in both directions)
-				// The cast to Resource is ok here since 'connected' statements
+				// The cast to Resource is OK here since 'connected' statements
 				// always include two resources, never literals
 				mod.remove(obj.asResource(), VISA.CONNECTED, subj);
 			}
@@ -1638,7 +1657,7 @@ public class RDFManager {
 
 	/**
 	 * Create a Resource object to link to a RDF node of a NetworkPort by using
-	 * the "address" property. The created resource will have all neccessary
+	 * the "address" property. The created resource will have all necessary
 	 * literals connected. These are the literals for the "address" and "type"
 	 * (IP version) properties.
 	 *
@@ -1663,7 +1682,7 @@ public class RDFManager {
 
 		Resource addrRes = VISA.createResource(sbLocName.toString());
 
-		// Create the neccessary literals
+		// Create the necessary literals
 		Literal ipAddrLiteral = mod.createLiteral(pIPAddr);
 		Literal ipVersionLiteral = mod.createLiteral(pIPV.toString());
 
@@ -1680,7 +1699,7 @@ public class RDFManager {
 
 	/**
 	 * Create a Resource object to link to a RDF address node using the
-	 * "network" property. All neccesary literal statements will be created and
+	 * "network" property. All necessary literal statements will be created and
 	 * inserted into the model.
 	 *
 	 * @param pNetwork Network address
@@ -1701,7 +1720,7 @@ public class RDFManager {
 
 		Resource netwRes = VISA.createResource(sbLocName.toString());
 
-		// Create the neccessary literals
+		// Create the necessary literals
 		Literal networkLiteral = mod.createLiteral(pNetwork);
 		Literal subnetLiteral = mod.createLiteral(String.valueOf(pSubnet));
 		Literal ipVersionLiteral = mod.createLiteral(pIPV.toString());
@@ -1717,7 +1736,7 @@ public class RDFManager {
 
 	/**
 	 * Create a Resource object to link to a RDF interface node using the "vlan"
-	 * property. All neccesary literal statements will be created and inserted
+	 * property. All necessary literal statements will be created and inserted
 	 * into the model.
 	 *
 	 * @param pVLAN VLAN object containing the required information
@@ -1763,7 +1782,7 @@ public class RDFManager {
 	 * defined by the subject of the 'interface' property. The interfaces will
 	 * be IP configured if an 'address' property of type 'ipv4' or 'ipv6' is
 	 * present. All 'connected' statements will be converted to NetworkCable
-	 * objects that connect the interfaces which are object ans subject to the
+	 * objects that connect the interfaces which are object and subject to the
 	 * statement.
 	 *
 	 * @param pMod The named model URI which will be processed. Can be set to
@@ -2128,7 +2147,7 @@ public class RDFManager {
 			TEBackend.TOPOLOGY_STORAGE.createCable(src, target, gIf);
 		}
 
-		// Create group switches where neccessary
+		// Create group switches where necessary
 		for(NCSwitch ncs : switchSet) {
 			ncs.createGroupSwitches();
 		}
@@ -2161,7 +2180,7 @@ public class RDFManager {
 				// Update component dimensions
 				nc.getConfig().setComponentDimensions(dimX, dimY);
 
-				// The grid location properties are not neccessarily present, so
+				// The grid location properties are not necessarily present, so
 				// first search for them
 				if(pMod.contains(res, VISABackup.COMP_LOC_X) && pMod.contains(res, VISABackup.COMP_LOC_Y)) {
 					// Grid location properties are present, read the values
@@ -2223,7 +2242,7 @@ public class RDFManager {
 	 * Prevent local name collisions. This method alters the local name of every
 	 * resource of a RDF model to make sure its local name is not present in the
 	 * currently stored model. The local name of the resource is appended with
-	 * an underscore followed by the MD5 hash of the unix timestamp at method
+	 * an underscore followed by the MD5 hash of the Unix timestamp at method
 	 * invocation. The statement is removed from the model and a new statement
 	 * with the altered nodes is inserted. Literals will not be altered.
 	 *
@@ -2498,7 +2517,7 @@ public class RDFManager {
 
 	/**
 	 * Read a SPARQL query from a file into a String and create a Query object
-	 * from that. If a resource was specified all occurences of $URI$
+	 * from that. If a resource was specified all occurrences of $URI$
 	 * placeholder in the read query will be replaced with the URI of the
 	 * resource. If a model URI is specified, GRAPH lines will be added to the
 	 * query using the placeholders $S_MOD$ and $E_MOD$.
@@ -2591,7 +2610,7 @@ public class RDFManager {
 	 * Determine the groups for all devices. Devices are grouped together
 	 * according to the networks they are attached to. If a device is attached
 	 * to 2 or more different networks it will not be grouped and assigned to
-	 * the global group 0.0.0.0 that collects all deviced which will be located
+	 * the global group 0.0.0.0 that collects all devices which will be located
 	 * on the base layer of the editor grid. Group information will be added to
 	 * the backup model for further processing.
 	 *

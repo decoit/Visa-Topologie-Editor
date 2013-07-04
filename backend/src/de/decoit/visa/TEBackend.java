@@ -1,3 +1,22 @@
+/*
+ *  Copyright (C) 2013, DECOIT GmbH
+ *
+ *	This file is part of VISA Topology-Editor.
+ *
+ *	VISA Topology-Editor is free software: you can redistribute it and/or modify
+ *	it under the terms of the GNU General Public License as published by the
+ *	Free Software Foundation, either version 3 of the License, or (at your option)
+ *	any later version.
+ *
+ *	VISA Topology-Editor is distributed in the hope that it will be useful, but
+ *	WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ *	or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+ *	more details.
+ *
+ *	You should have received a copy of the GNU General Public License along with
+ *	VISA Topology-Editor. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package de.decoit.visa;
 
 import java.io.IOException;
@@ -354,7 +373,7 @@ public class TEBackend {
 
 
 	/**
-	 * Set the dimensions of the editorgrid of the frontend
+	 * Set the dimensions of the editor grid of the frontend
 	 *
 	 * @param pX Horizontal dimension (number of grid cells)
 	 * @param pY Vertical dimension (number of grid cells)
@@ -374,9 +393,9 @@ public class TEBackend {
 
 
 	/**
-	 * Return the dimensions of the editorgrid of the frontend
+	 * Return the dimensions of the editor grid of the frontend
 	 *
-	 * @return The dimensions of the editorgrid of the frontend
+	 * @return The dimensions of the editor grid of the frontend
 	 */
 	public static Dimension2D getGridDimensions() {
 		return gridDimensions;
@@ -500,8 +519,8 @@ public class TEBackend {
 
 
 	/**
-	 * Wrapper to get a ModificationQueue from the AJAXServer. Prevents exposal
-	 * of the server to the outside.
+	 * Wrapper to get a ModificationQueue from the AJAXServer. Prevents direct
+	 * access to the AJAXServer from the outside.
 	 *
 	 * @param pQueueID ID for this queue
 	 * @return A modification queue using the provided values as target
@@ -536,8 +555,8 @@ public class TEBackend {
 
 
 	/**
-	 * Log the detailed memory usage of the backend to the logfile. Uses
-	 * loglevel DEBUG and will not log anything if that level is disabled.
+	 * Log the detailed memory usage of the backend to the log file. Uses
+	 * log level DEBUG and will not log anything if that level is disabled.
 	 */
 	@SuppressWarnings("ucd")
 	public static void logMemoryUsage() {
@@ -570,7 +589,7 @@ public class TEBackend {
 
 
 	/**
-	 * Empty private constructor, this class is not meant to be instanciated
+	 * Empty private constructor, this class is not meant to be instantiated
 	 */
 	private TEBackend() {
 		/* Ignored */

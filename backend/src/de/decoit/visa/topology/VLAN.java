@@ -1,3 +1,22 @@
+/*
+ *  Copyright (C) 2013, DECOIT GmbH
+ *
+ *	This file is part of VISA Topology-Editor.
+ *
+ *	VISA Topology-Editor is free software: you can redistribute it and/or modify
+ *	it under the terms of the GNU General Public License as published by the
+ *	Free Software Foundation, either version 3 of the License, or (at your option)
+ *	any later version.
+ *
+ *	VISA Topology-Editor is distributed in the hope that it will be useful, but
+ *	WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ *	or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+ *	more details.
+ *
+ *	You should have received a copy of the GNU General Public License along with
+ *	VISA Topology-Editor. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package de.decoit.visa.topology;
 
 import java.util.ArrayList;
@@ -224,9 +243,9 @@ public class VLAN implements ITopologyElement, IRDFObject, IJSON, IRemovableComp
 
 
 	/**
-	 * This class contains pre-defined colors for VLANs which will be selected
+	 * This class contains predefined colors for VLANs which will be selected
 	 * by a round-robin system. It is used if new VLANs without color
-	 * information, for example if extracted from an RDF model, are credated.
+	 * information, for example if extracted from an RDF model, are created.
 	 *
 	 * @author Thomas Rix
 	 */

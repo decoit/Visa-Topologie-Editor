@@ -1,3 +1,22 @@
+/*
+ *  Copyright (C) 2013, DECOIT GmbH
+ *
+ *	This file is part of VISA Topology-Editor.
+ *
+ *	VISA Topology-Editor is free software: you can redistribute it and/or modify
+ *	it under the terms of the GNU General Public License as published by the
+ *	Free Software Foundation, either version 3 of the License, or (at your option)
+ *	any later version.
+ *
+ *	VISA Topology-Editor is distributed in the hope that it will be useful, but
+ *	WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ *	or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+ *	more details.
+ *
+ *	You should have received a copy of the GNU General Public License along with
+ *	VISA Topology-Editor. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package de.decoit.visa.http;
 
 import java.io.UnsupportedEncodingException;
@@ -64,7 +83,7 @@ public class QueryString {
 
 	/**
 	 * Evaluate a given query string and store the parameters in this object. It
-	 * will split the query string at all occurences of the "&" sign and add
+	 * will split the query string at all occurrences of the "&" sign and add
 	 * each parameter to the parameter map
 	 *
 	 * @param pQuery A string containing the query string of a URI/URL without
