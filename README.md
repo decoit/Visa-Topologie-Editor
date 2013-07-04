@@ -24,6 +24,8 @@ To install the backend you need a Java SE 7 JDK and Apache Ant. Java versions pr
 
 After compiling and packaging using `ant` change directory to the location you copied the `dist` contents to and run `./install.sh`. This will install the symbolic link `/usr/bin/visabackend` to allow starting the backend by just typing `visabackend` on the console. This step is optional if you want to run the startup script directly.
 
+To create JavaDoc from the source files run `ant javadoc`. The documentation will be located in the `doc/` directory.
+
 ### Usage
 *This section is under construction*
 
