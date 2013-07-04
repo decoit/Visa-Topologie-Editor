@@ -1,3 +1,22 @@
+/*
+ *  Copyright (C) 2013, DECOIT GmbH
+ *
+ *	This file is part of VISA Topology-Editor.
+ *
+ *	VISA Topology-Editor is free software: you can redistribute it and/or modify
+ *	it under the terms of the GNU General Public License as published by the
+ *	Free Software Foundation, either version 3 of the License, or (at your option)
+ *	any later version.
+ *
+ *	VISA Topology-Editor is distributed in the hope that it will be useful, but
+ *	WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ *	or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+ *	more details.
+ *
+ *	You should have received a copy of the GNU General Public License along with
+ *	VISA Topology-Editor. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package de.decoit.visa.http.ajax;
 
 import java.io.IOException;
@@ -56,7 +75,7 @@ import de.decoit.visa.http.ajax.handlers.*;
  * above return messages (key: status). Successful requests can contain
  * additional keys, which are defined by the handlers.<br>
  * If the status key contains the values 'ajaxGeneral' or 'ajaxException' an
- * error message is sent unter the key 'message'. The 'ajaxException' reply also
+ * error message is sent using the key 'message'. The 'ajaxException' reply also
  * includes the type of exception using the key 'type'.<br>
  * Any handler that alters the topology structure returns a JSON object of the
  * current topology using the key 'topology'.
@@ -102,7 +121,7 @@ public class AJAXServer {
 	public static final String AJAX_ERROR_EXCEPTION = "ajaxException";
 
 	/**
-	 * Response message: Requesr failed with unhandled exception and rollback
+	 * Response message: Request failed with unhandled exception and rollback
 	 * failed
 	 */
 	public static final String AJAX_ERROR_EXCEPTION_UNRESOLVED = "ajaxExceptionUnresolved";

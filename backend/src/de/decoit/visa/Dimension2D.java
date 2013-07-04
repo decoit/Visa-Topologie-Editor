@@ -1,3 +1,22 @@
+/*
+ *  Copyright (C) 2013, DECOIT GmbH
+ *
+ *	This file is part of VISA Topology-Editor.
+ *
+ *	VISA Topology-Editor is free software: you can redistribute it and/or modify
+ *	it under the terms of the GNU General Public License as published by the
+ *	Free Software Foundation, either version 3 of the License, or (at your option)
+ *	any later version.
+ *
+ *	VISA Topology-Editor is distributed in the hope that it will be useful, but
+ *	WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ *	or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+ *	more details.
+ *
+ *	You should have received a copy of the GNU General Public License along with
+ *	VISA Topology-Editor. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package de.decoit.visa;
 
 import java.util.Comparator;
@@ -9,7 +28,7 @@ import de.decoit.visa.interfaces.IJSON;
 /**
  * This class is used to represent the size of a two dimensional object.
  * Dimensions are limited to values of 0 or greater since objects cannot have
- * negative dimensions. It provides member Comparator classes for comparision of
+ * negative dimensions. It provides member Comparator classes for comparison of
  * horizontal and vertical dimensions.
  *
  * @author Thomas Rix
@@ -112,8 +131,8 @@ public class Dimension2D implements IJSON {
 
 	/**
 	 * This Comparator implementation allows comparison of two Dimension2D
-	 * objects. It will use the horizontal (X) dimensions for comparision. The
-	 * result follows the Integer comparision: 0 if both values are identical,
+	 * objects. It will use the horizontal (X) dimensions for comparison. The
+	 * result follows the Integer comparison: 0 if both values are identical,
 	 * negative if the second value is greater and positive if it is less than
 	 * the first value.
 	 *
@@ -130,8 +149,8 @@ public class Dimension2D implements IJSON {
 
 	/**
 	 * This Comparator implementation allows comparison of two Dimension2D
-	 * objects. It will use the vertical (Y) dimensions for comparision. The
-	 * result follows the Integer comparision: 0 if both values are identical,
+	 * objects. It will use the vertical (Y) dimensions for comparison. The
+	 * result follows the Integer comparison: 0 if both values are identical,
 	 * negative if the second value is greater and positive if it is less than
 	 * the first value.
 	 *

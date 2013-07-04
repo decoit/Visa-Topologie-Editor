@@ -1,10 +1,29 @@
+/*
+ *  Copyright (C) 2013, DECOIT GmbH
+ *
+ *	This file is part of VISA Topology-Editor.
+ *
+ *	VISA Topology-Editor is free software: you can redistribute it and/or modify
+ *	it under the terms of the GNU General Public License as published by the
+ *	Free Software Foundation, either version 3 of the License, or (at your option)
+ *	any later version.
+ *
+ *	VISA Topology-Editor is distributed in the hope that it will be useful, but
+ *	WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ *	or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+ *	more details.
+ *
+ *	You should have received a copy of the GNU General Public License along with
+ *	VISA Topology-Editor. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package de.decoit.visa.enums;
 
 /**
  * This enumeration defines supported versions of the Internet Protocol (IP). It
  * is possible to get a numeric representation (integer) for the versions to use
  * them in text based information like JSON. Additionally it is possible to
- * retrieve the enum object for a given numeric representation (integer)
+ * retrieve the enumeration object for a given numeric representation (integer)
  *
  * @author Thomas Rix
  */
@@ -52,7 +71,7 @@ public enum IPVersion {
 	 * Return the number of bits used to form a segment in the string notation
 	 * of this IP version.
 	 *
-	 * @return Number of bits per segement
+	 * @return Number of bits per segment
 	 */
 	public int getSegmentBitCount() {
 		return segmentBitCount;
@@ -114,11 +133,12 @@ public enum IPVersion {
 
 
 	/**
-	 * Return the corresponding enum object to a string version representation
+	 * Return the corresponding enumeration object to a string version
+	 * representation
 	 *
 	 * @param pNum The string version representation
-	 * @return Enum object for the string representation, null if an invalid
-	 *         representation was provided
+	 * @return Enumeration object for the string representation, null if an
+	 * 		   invalid representation was provided
 	 */
 	public static IPVersion getVersion(String pNum) {
 		switch(pNum) {

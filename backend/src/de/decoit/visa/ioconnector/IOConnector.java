@@ -1,3 +1,22 @@
+/*
+ *  Copyright (C) 2013, DECOIT GmbH
+ *
+ *	This file is part of VISA Topology-Editor.
+ *
+ *	VISA Topology-Editor is free software: you can redistribute it and/or modify
+ *	it under the terms of the GNU General Public License as published by the
+ *	Free Software Foundation, either version 3 of the License, or (at your option)
+ *	any later version.
+ *
+ *	VISA Topology-Editor is distributed in the hope that it will be useful, but
+ *	WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ *	or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+ *	more details.
+ *
+ *	You should have received a copy of the GNU General Public License along with
+ *	VISA Topology-Editor. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package de.decoit.visa.ioconnector;
 
 import java.io.BufferedReader;
@@ -48,7 +67,7 @@ public class IOConnector {
 	 * instances and open a SSL secured socket to the IO-Tool. Last known return
 	 * code and message are initialized with -2 and "" respectively.
 	 *
-	 * @param pHost Hostname or IP-Address of the IO-Tool server
+	 * @param pHost Host name or IP-Address of the IO-Tool server
 	 * @param pPort Port on which the IO-Tool server is listening
 	 * @throws IOException if the host cannot be resolved, writing or reading
 	 *             the socket fails
@@ -74,7 +93,7 @@ public class IOConnector {
 	 * received. A value of -1 shows that the last received data did not
 	 * describe a valid Response object.
 	 *
-	 * @return The return value of the last Response, -1 or -2 in the decribed
+	 * @return The return value of the last Response, -1 or -2 in the described
 	 *         cases
 	 */
 	public int getLastReturnCode() {
@@ -84,7 +103,7 @@ public class IOConnector {
 
 	/**
 	 * Return the message of the last received Response object. Returns an empty
-	 * string if no message was included or an error occured.
+	 * string if no message was included or an error occurred.
 	 *
 	 * @return The message of the last Response
 	 */
@@ -111,7 +130,7 @@ public class IOConnector {
 	 * Initial value is -2 meaning no Response was received. A value of -1 shows
 	 * that the last received data did not describe a valid Response object.
 	 *
-	 * @return The return value of the last Response, -1 or -2 in the decribed
+	 * @return The return value of the last Response, -1 or -2 in the described
 	 *         cases
 	 */
 	public int getLastWaitReturnCode() {
@@ -122,7 +141,7 @@ public class IOConnector {
 	/**
 	 * Return the message of the last Response object that was received after a
 	 * 'please wait' signal. Returns an empty string if no message was included
-	 * or an error occured.
+	 * or an error occurred.
 	 *
 	 * @return The message of the last Response
 	 */
@@ -152,7 +171,7 @@ public class IOConnector {
 	 * Possible return codes are:<br>
 	 * 0: Success
 	 *
-	 * @return Enum constant according to request status
+	 * @return Enumeration constant according to request status
 	 * @throws IOException if writing to or reading from the socket fails
 	 * @see de.decoit.visa.enums.IOToolRequestStatus
 	 */
@@ -181,7 +200,7 @@ public class IOConnector {
 	 * 100: Unknown topology ID
 	 *
 	 * @param pTopoID ID string of the requested topology
-	 * @return Enum constant according to request status
+	 * @return Enumeration constant according to request status
 	 * @throws IOException if writing to or reading from the socket fails
 	 * @see de.decoit.visa.enums.IOToolRequestStatus
 	 */
@@ -220,7 +239,7 @@ public class IOConnector {
 	 * @param pXML RDF/XML serialization of the topology's RDF model
 	 * @param pDesc Description, also known as human readable name, of the
 	 *            topology
-	 * @return Enum constant according to request status
+	 * @return Enumeration constant according to request status
 	 * @throws IOException if writing to or reading from the socket fails
 	 * @see de.decoit.visa.enums.IOToolRequestStatus
 	 */
@@ -256,7 +275,7 @@ public class IOConnector {
 	 * 107: Topology is delete protected
 	 *
 	 * @param pTopoID ID string of the topology to remove
-	 * @return Enum constant according to request status
+	 * @return Enumeration constant according to request status
 	 * @throws IOException if writing to or reading from the socket fails
 	 * @see de.decoit.visa.enums.IOToolRequestStatus
 	 */
@@ -290,7 +309,7 @@ public class IOConnector {
 	 * 254: Please wait
 	 *
 	 * @param pTopoID ID string of the topology to remove
-	 * @return Enum constant according to request status
+	 * @return Enumeration constant according to request status
 	 * @throws IOException if writing to or reading from the socket fails
 	 * @see de.decoit.visa.enums.IOToolRequestStatus
 	 */
@@ -324,7 +343,7 @@ public class IOConnector {
 	 * 254: Please wait
 	 *
 	 * @param pTopoID ID string of the topology to replicate
-	 * @return Enum constant according to request status
+	 * @return Enumeration constant according to request status
 	 * @throws IOException if writing to or reading from the socket fails
 	 * @see de.decoit.visa.enums.IOToolRequestStatus
 	 */
@@ -356,7 +375,7 @@ public class IOConnector {
 	 * 105: Command execution failure<br>
 	 * 254: Please wait
 	 *
-	 * @return Enum constant according to request status
+	 * @return Enumeration constant according to request status
 	 * @throws IOException if writing to or reading from the socket fails
 	 * @see de.decoit.visa.enums.IOToolRequestStatus
 	 */
@@ -389,7 +408,7 @@ public class IOConnector {
 	 * 105: Command execution failure<br>
 	 * 254: Please wait
 	 *
-	 * @return Enum constant according to request status
+	 * @return Enumeration constant according to request status
 	 * @throws IOException if writing to or reading from the socket fails
 	 * @see de.decoit.visa.enums.IOToolRequestStatus
 	 */
@@ -411,7 +430,7 @@ public class IOConnector {
 	/**
 	 * Disconnect from the IO-Tool. Setting the parameter to true will
 	 * force close the socket causing any read or write operation to
-	 * instantly break. This may cause undesired behaviour. If the parameter
+	 * instantly break. This may cause undesired behavior. If the parameter
 	 * is set to false, calling this method while waiting for the IO-Tool to
 	 * complete a job will cause an IOToolException.
 	 *
@@ -551,9 +570,9 @@ public class IOConnector {
 
 		/**
 		 * Construct a new connection thread. It will connect to the socket with
-		 * provided hostname and port.
+		 * provided host name and port.
 		 *
-		 * @param pHost Hostname or IP-Address of the IO-Tool server
+		 * @param pHost Host name or IP-Address of the IO-Tool server
 		 * @param pPort Port on which the IO-Tool server is listening
 		 * @throws IOException if creating the socket fails
 		 */
@@ -646,9 +665,9 @@ public class IOConnector {
 
 
 		/**
-		 * Get the last received Reponse object
+		 * Get the last received Response object
 		 *
-		 * @return The last received Reponse object
+		 * @return The last received Response object
 		 */
 		public Response getResponse() {
 			return res;
@@ -663,7 +682,7 @@ public class IOConnector {
 		/**
 		 * Close the socket to the IO-Tool. Setting the parameter to true will
 		 * force close the socket causing any read or write operation to
-		 * instantly break. This may cause undesired behaviour. If the parameter
+		 * instantly break. This may cause undesired behavior. If the parameter
 		 * is set to false, calling this method while the thread is waiting for
 		 * the IO-Tool to complete a job will cause an IOToolException.
 		 *

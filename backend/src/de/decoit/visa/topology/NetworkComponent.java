@@ -1,3 +1,22 @@
+/*
+ *  Copyright (C) 2013, DECOIT GmbH
+ *
+ *	This file is part of VISA Topology-Editor.
+ *
+ *	VISA Topology-Editor is free software: you can redistribute it and/or modify
+ *	it under the terms of the GNU General Public License as published by the
+ *	Free Software Foundation, either version 3 of the License, or (at your option)
+ *	any later version.
+ *
+ *	VISA Topology-Editor is distributed in the hope that it will be useful, but
+ *	WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ *	or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+ *	more details.
+ *
+ *	You should have received a copy of the GNU General Public License along with
+ *	VISA Topology-Editor. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package de.decoit.visa.topology;
 
 import java.util.ArrayList;
@@ -63,7 +82,7 @@ abstract public class NetworkComponent implements ITopologyElement, IRemovableCo
 		id = pID;
 		objectBeingRemoved = false;
 
-		// Construct the identifier from the subtype information and ID number
+		// Construct the identifier from the type information and ID number
 		StringBuilder sbIdentifier = new StringBuilder();
 		sbIdentifier.append(pClassType);
 		sbIdentifier.append("_");
@@ -559,12 +578,12 @@ abstract public class NetworkComponent implements ITopologyElement, IRemovableCo
 		 * Calculate the size of the dragbox which surrounds this component. The
 		 * calculation takes into account the component dimensions, globally set
 		 * the component margin, the interface orientations and some extra space
-		 * to prevent multiple components from forming unpassable walls.
+		 * to prevent multiple components from forming impassable walls.
 		 */
 		protected void calcDragboxDimensions() {
 			if(componentDimensions != null) {
 				// Calculate dragbox dimensions, add 2 at the end to make sure
-				// components cannot form an unpassable wall
+				// components cannot form an impassable wall
 				int x = componentDimensions.getX() + TEBackend.getComponentMargin() * 2 + 2;
 				int y = componentDimensions.getY() + TEBackend.getComponentMargin() * 2 + 2;
 

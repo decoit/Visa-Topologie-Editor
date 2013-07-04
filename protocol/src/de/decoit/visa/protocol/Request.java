@@ -1,3 +1,22 @@
+/*
+ *  Copyright (C) 2013, DECOIT GmbH
+ *
+ *	This file is part of VISA Topology-Editor.
+ *
+ *	VISA Topology-Editor is free software: you can redistribute it and/or modify
+ *	it under the terms of the GNU General Public License as published by the
+ *	Free Software Foundation, either version 3 of the License, or (at your option)
+ *	any later version.
+ *
+ *	VISA Topology-Editor is distributed in the hope that it will be useful, but
+ *	WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ *	or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+ *	more details.
+ *
+ *	You should have received a copy of the GNU General Public License along with
+ *	VISA Topology-Editor. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package de.decoit.visa.protocol;
 
 import java.util.HashMap;
@@ -7,9 +26,9 @@ import org.apache.commons.codec.binary.Base64;
 
 /**
  * This class is used the Topology-Editor to send a command to the IO-Tool. A
- * request contains a command from the {@link Commands} enum and an argument
+ * request contains a command from the {@link Commands} enumeration and an argument
  * map. Which arguments are allowed for a specific command is specified in the
- * Javadoc of the {@link Commands} enum. Command string, argument keys and
+ * JavaDoc of the {@link Commands} enumeration. Command string, argument keys and
  * values are stored Base64 encoded to prevent issues with the YAML parser. A
  * Request object is immutable, once created it cannot be altered.
  *

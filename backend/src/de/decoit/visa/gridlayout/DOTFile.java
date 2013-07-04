@@ -1,3 +1,22 @@
+/*
+ *  Copyright (C) 2013, DECOIT GmbH
+ *
+ *	This file is part of VISA Topology-Editor.
+ *
+ *	VISA Topology-Editor is free software: you can redistribute it and/or modify
+ *	it under the terms of the GNU General Public License as published by the
+ *	Free Software Foundation, either version 3 of the License, or (at your option)
+ *	any later version.
+ *
+ *	VISA Topology-Editor is distributed in the hope that it will be useful, but
+ *	WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ *	or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+ *	more details.
+ *
+ *	You should have received a copy of the GNU General Public License along with
+ *	VISA Topology-Editor. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package de.decoit.visa.gridlayout;
 
 import java.io.BufferedWriter;
@@ -24,7 +43,7 @@ import de.decoit.visa.topology.TopologyStorage.ComponentGroup.GroupInterface;
 
 /**
  * This class creates an input file for graphviz in DOT format. It uses some
- * hardcoded global and node settings and producing the remaining preferences
+ * hard coded global and node settings and producing the remaining preferences
  * from the current environment or provided NetworkComponent (node) and
  * NetworkCable (edge) objects. It can only be used for non-directed graphs.
  *
