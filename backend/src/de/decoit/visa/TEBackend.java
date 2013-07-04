@@ -556,7 +556,7 @@ public class TEBackend {
 
 	/**
 	 * Log the detailed memory usage of the backend to the log file. Uses
-	 * loglevel DEBUG and will not log anything if that level is disabled.
+	 * log level DEBUG and will not log anything if that level is disabled.
 	 */
 	@SuppressWarnings("ucd")
 	public static void logMemoryUsage() {
