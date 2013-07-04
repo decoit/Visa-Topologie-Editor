@@ -1,3 +1,11 @@
+<table>
+    <tr>
+        <td> <a href="http://www.visa-project.de/"><img src="http://www.decoit.de/cms/upload/logos/forschungsprojekte/visa-logo_200.png" alt="VISA"></a></td>
+        <td><img src="http://www.visa-project.de/cms/upload/bilder/TE-Logo_words.png" alt="VISA Topologie Editor"></td>
+        <td> <a href="http://www.decoit.de/"><img alt="DECOIT GmbH" src="http://www.decoit.de/cms/decoit_v3_images/logo.png"</a> </td>
+    </tr>
+</table>
+
 # VISA Topology-Editor
 The VISA Topology-Editor (VTE) is a topology editor prototype, which was developed by the [DECOIT GmbH](http://www.decoit.de/ "DECOIT GmbH"), located in Bremen (Germany), during the VISA research project. For more information about VISA please visit http://www.visa-project.de/.
 
