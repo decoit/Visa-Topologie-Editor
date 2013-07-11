@@ -55,10 +55,10 @@ Additionally, there are the SSL parameters available, which are already set in i
 ## Frontend
 ### Preparation
 The frontend requires an Apache HTTP Server. It was developed on version 2.2 but may run on earlier versions (2.0 or 2.1) too. The following modules must be installed and enabled:
-* mod_php5, version 5.3 or later
-* mod_proxy
-* mod_proxy_http
-* mod_rewrite
+* `mod_php5`, version 5.3 or later
+* `mod_proxy`
+* `mod_proxy_http`
+* `mod_rewrite`
 
 The following settings should be made in the `php.ini` file to allow the file upload function to work properly:
 * `post_max_size = 10M`
